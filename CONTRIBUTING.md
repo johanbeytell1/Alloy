@@ -7,6 +7,9 @@ Alloy is an open-source structural component library. It's meant to grow securel
 1. All elements must adhere to the core Alloy aesthetic properties (dark-mode exclusive, border-driven logic, no heavy opacities or soft dropshadows). Standard `border-2 border-border` and sharp corners (`rounded-none` by default unless it's a structural pill element).
 2. Write raw HTML elements using absolute Tailwind CSS values and reference our main tokens. Avoid runtime logic or dependencies.
 3. Use the `variant-item` wrapper structures found in the component explorer when adding new configurations.
+4. Register new categories in both the sidebar (`data-type` buttons) and a matching `<article data-type="...">` block. Category ids are used by the filter, the live counts and hash deep links (`components/index.html#bento`).
+5. Keep every block responsive: stack multi-column grids below `md`, allow horizontal scroll for wide tables, and never let a preview overflow the viewport.
+6. Rebuild the stylesheet after changing markup or tokens: `npm install && npm run build:css`.
 
 ## Git Operations
 
