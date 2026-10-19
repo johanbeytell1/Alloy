@@ -65,3 +65,7 @@
     }
 }
 
+
+/* Explicit content sources for the compiled stylesheet */
+@source "../index.html";
+@source "../components/index.html";
