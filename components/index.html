@@ -13,7 +13,7 @@
         background-size: 100px 100px;
     }
     .hero-glow {
-        background: radial-gradient(circle at 50% 50%, rgba(255, 149, 49, 0.05) 0%, transparent 70%);
+        background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-primary) 5%, transparent) 0%, transparent 70%);
     }
     .pixel-border {
         box-shadow: 
@@ -963,11 +963,18 @@
                     </div>
                     <div class="preview-area border border-border bg-bg p-8 md:p-16 flex flex-col items-center justify-center gap-8 min-h-[260px]">
                         <div class="relative w-20 h-20">
-                            <div class="absolute inset-0 border-2 border-border"></div>
-                            <div class="absolute inset-0 border-2 border-transparent border-t-primary animate-spin"></div>
-                            <div class="absolute inset-3 border border-zinc-800 flex items-center justify-center">
+                            <div class="absolute inset-3 border border-border flex items-center justify-center">
                                 <span class="text-[10px] font-black font-mono text-primary">84</span>
                             </div>
+                            <!-- Blocky trace ring: 8 cells chasing clockwise -->
+                            <span class="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary animate-loader-trace"></span>
+                            <span class="absolute top-0 right-0 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-1.4s"></span>
+                            <span class="absolute top-1/2 right-0 -translate-y-1/2 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-1.2s"></span>
+                            <span class="absolute bottom-0 right-0 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-1s"></span>
+                            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-0.8s"></span>
+                            <span class="absolute bottom-0 left-0 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-0.6s"></span>
+                            <span class="absolute top-1/2 left-0 -translate-y-1/2 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-0.4s"></span>
+                            <span class="absolute top-0 left-0 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-0.2s"></span>
                         </div>
                         <div class="text-center">
                             <div class="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-2">Compiling Core</div>
@@ -1020,8 +1027,10 @@
                                 <div class="flex gap-3"><span class="text-primary">[..]</span><span class="text-white">compile structural tokens</span><span class="ml-auto text-primary animate-pulse">RUNNING</span></div>
                             </div>
                             <div class="mt-8 flex items-center gap-4">
-                                <div class="flex-1 h-2 bg-zinc-900 border border-border">
-                                    <div class="h-full bg-primary w-[64%]"></div>
+                                <div class="flex-1 h-2 bg-zinc-900 border border-border overflow-hidden">
+                                    <div class="relative h-full bg-primary w-[64%] animate-boot-grow overflow-hidden">
+                                        <span class="absolute inset-y-0 left-0 w-1/4 bg-white/50 animate-progress-sheen"></span>
+                                    </div>
                                 </div>
                                 <span class="text-[10px] font-black font-mono text-primary">64%</span>
                             </div>
@@ -2155,7 +2164,7 @@
                         <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">05 FEATURES_MATRIX</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1">SOURCE</button>
                     </div>
-                    <div class="preview-area border-2 border-border bg-bg overflow-x-auto scollbar-hide">
+                    <div class="preview-area border-2 border-border bg-bg overflow-x-auto scrollbar-hide">
                          <table class="w-full text-left border-collapse min-w-[600px]">
                              <thead>
                                  <tr class="bg-zinc-900 border-b border-border">
@@ -2294,7 +2303,7 @@
                         <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">01 INDUSTRIAL_GRID</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1">SOURCE</button>
                     </div>
-                    <div class="preview-area border border-border bg-bg overflow-x-auto scollbar-hide">
+                    <div class="preview-area border border-border bg-bg overflow-x-auto scrollbar-hide">
                         <table class="w-full text-left border-collapse">
                             <thead>
                                 <tr class="bg-zinc-900/50 border-b border-border">
@@ -2860,7 +2869,7 @@
                                 <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Slack</span>
                             </a>
                             <a href="#" class="bg-bg p-6 flex flex-col items-center justify-center gap-4 hover:bg-zinc-900 transition-colors group min-h-[120px]">
-                                <i class="bi bi-figma text-2xl text-zinc-600 group-hover:text-primary transition-colors"></i>
+                                <i class="bi bi-vector-pen text-2xl text-zinc-600 group-hover:text-primary transition-colors"></i>
                                 <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Figma</span>
                             </a>
                             <a href="#" class="bg-bg p-6 flex flex-col items-center justify-center gap-4 hover:bg-zinc-900 transition-colors group min-h-[120px]">
@@ -3054,7 +3063,7 @@
                                 </div>
                                 <div class="grid grid-cols-12 gap-4 px-6 py-4 items-center hover:bg-zinc-900/60 transition-colors opacity-60">
                                     <div class="col-span-4 flex items-center gap-3">
-                                        <div class="w-8 h-8 bg-zinc-900 border border-border flex items-center justify-center text-zinc-600"><i class="bi bi-webhook text-xs"></i></div>
+                                        <div class="w-8 h-8 bg-zinc-900 border border-border flex items-center justify-center text-zinc-600"><i class="bi bi-plug text-xs"></i></div>
                                         <div>
                                             <div class="text-[10px] font-black uppercase tracking-widest">Legacy Endpoint</div>
                                             <div class="text-[7px] font-mono text-zinc-600">/api/legacy/bridge</div>
@@ -3819,7 +3828,7 @@
                             <details class="group" open>
                                 <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-6 flex items-center justify-between gap-5 hover:bg-zinc-900/60 transition-colors">
                                     <span class="text-[10px] font-black uppercase tracking-widest text-white">How do I migrate an existing UI?</span>
-                                    <i class="bi bi-dash text-primary shrink-0"></i>
+                                    <i class="bi bi-plus text-zinc-500 group-open:rotate-45 group-open:text-primary transition-transform shrink-0"></i>
                                 </summary>
                                 <p class="px-6 pb-6 text-[11px] font-bold text-zinc-500 leading-relaxed">Map existing spacing to the atomic scale first, then replace surfaces and borders. Components inherit the system automatically.</p>
                             </details>
@@ -4732,10 +4741,11 @@
                                 </div>
                                 <div class="flex items-center justify-between mt-2 mb-8">
                                     <label class="flex items-center gap-2 cursor-pointer group">
-                                        <input type="checkbox" class="sr-only peer">
-                                        <div class="w-4 h-4 border border-zinc-700 peer-checked:bg-primary peer-checked:border-primary transition-all relative">
-                                            <i class="bi bi-check text-bg text-[10px] absolute inset-0 flex items-center justify-center opacity-0 peer-checked:opacity-100"></i>
-                                        </div>
+                                        <span class="relative w-4 h-4 shrink-0">
+                                            <input type="checkbox" class="peer absolute inset-0 opacity-0 cursor-pointer">
+                                            <span class="absolute inset-0 border border-zinc-700 peer-checked:bg-primary peer-checked:border-primary transition-all"></span>
+                                            <i class="bi bi-check text-bg text-[10px] absolute inset-0 hidden peer-checked:flex items-center justify-center pointer-events-none"></i>
+                                        </span>
                                         <span class="text-[10px] font-bold text-zinc-500 uppercase">Keep Line Open</span>
                                     </label>
                                     <a href="#" class="text-[10px] font-bold text-primary uppercase underline hover:text-white transition-all">Lost Key?</a>
@@ -5050,6 +5060,43 @@
      </div>
   </div>
 
+  <!-- Theme Lab Overlay -->
+  <div id="themeLab" class="fixed bottom-4 right-4 z-[90] w-72 max-w-[calc(100vw-2rem)] border border-border bg-zinc-950/95 backdrop-blur-md pixel-border">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-border bg-zinc-900/60">
+          <span class="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-zinc-300"><span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Theme Lab</span>
+          <button id="themeLabHide" class="w-6 h-6 flex items-center justify-center text-zinc-500 hover:text-white transition-colors" aria-label="Hide theme lab"><i class="bi bi-dash-lg text-xs"></i></button>
+      </div>
+      <div class="p-4 space-y-3">
+          <label class="flex items-center justify-between gap-4 cursor-pointer group">
+              <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Primary</span>
+              <span class="flex items-center gap-3">
+                  <span data-theme-value="primary" class="text-[8px] font-mono text-zinc-600">#FF9531</span>
+                  <input type="color" data-theme-channel="primary" value="#ff9531" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Primary color" />
+              </span>
+          </label>
+          <label class="flex items-center justify-between gap-4 cursor-pointer group">
+              <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Secondary</span>
+              <span class="flex items-center gap-3">
+                  <span data-theme-value="secondary" class="text-[8px] font-mono text-zinc-600">#18181B</span>
+                  <input type="color" data-theme-channel="secondary" value="#18181b" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Secondary surface color" />
+              </span>
+          </label>
+          <label class="flex items-center justify-between gap-4 cursor-pointer group">
+              <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Background</span>
+              <span class="flex items-center gap-3">
+                  <span data-theme-value="background" class="text-[8px] font-mono text-zinc-600">#09090B</span>
+                  <input type="color" data-theme-channel="background" value="#09090b" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Background color" />
+              </span>
+          </label>
+      </div>
+      <div class="px-4 py-3 border-t border-border flex items-center justify-between">
+          <span class="text-[7px] font-black uppercase tracking-widest text-zinc-700">Live token preview</span>
+          <button id="themeLabReset" class="px-3 py-1.5 border border-border text-[7px] font-black uppercase tracking-widest text-zinc-400 hover:border-primary hover:text-primary transition-all">Reset</button>
+      </div>
+  </div>
+  <button id="themeLabOpen" class="hidden fixed bottom-4 right-4 z-[90] w-11 h-11 bg-primary text-zinc-950 flex items-center justify-center pixel-border hover:bg-white transition-colors" aria-label="Open theme lab"><i class="bi bi-palette2"></i></button>
+
+  <script src="../src/theme-lab.js"></script>
   <script>
     (function () {
       const searchInput = document.getElementById('componentSearch');

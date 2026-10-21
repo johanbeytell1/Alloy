@@ -6,6 +6,16 @@
 
 ## Recent Changes
 
+### Patch — Theme Lab, loader fixes & component sweep
+
+- **Theme Lab overlay:** both the landing page and the explorer now carry a floating settings bar with **primary**, **secondary (surface)** and **background** color pickers. Changes apply live through the CSS token layer, persist across pages via `localStorage`, and the bar can be hidden/restored with a single click (hidden state persists too). A reset button restores the stock Alloy palette.
+- **Loaders reworked:** the Core Spinner's rotating square was replaced with a blocky 8-cell trace ring that matches the industrial aesthetic, and the Terminal Boot Log's progress bar is now animated (grow-in fill plus a looping sheen) instead of static.
+- **Landing page fixes:** removed the stray decorative line in the top-left of the hero, and rebalanced the Vault Expansion section (left text column now gets 40% of the grid on desktop instead of a cramped third, so the copy no longer presses against the divider).
+- **Component sweep:** fixed the auth form's "Keep Line Open" checkbox (the check mark could never render due to a broken `peer` relationship), corrected the `scollbar-hide` class typo on two scrollable tables, replaced two non-existent Bootstrap icons (`bi-figma` → `bi-vector-pen`, `bi-webhook` → `bi-plug`) that rendered as blank glyphs, and made the Split FAQ's first accordion icon toggle like its siblings.
+- **Token hygiene:** hero glows and the checkbox hover color now derive from `var(--color-primary)` instead of hard-coded orange values, so they respond to Theme Lab changes. Added a `--color-secondary` token and dedicated loader keyframes (`loader-trace`, `progress-sheen`, `boot-grow`) to the theme layer.
+
+### v1.1.0
+
 - **Vault expansion:** 77 new foundations across 14 new blocks — toggles, indicators, load states, overlays, pagination, stats, bento grids, editorial, integrations, newsletter capture, process pipelines, team, FAQ and app shells.
 - Expanded every existing block: buttons, badges, inputs, headers, heroes, features, pricing, tables, CTA, testimonials, footers, feedback, navigation, auth and contact now carry additional variants.
 - Added URL hash deep-linking to the explorer, e.g. `components/index.html#bento` opens the bento vault directly.
@@ -29,6 +39,7 @@
 - **Zero Latency Scaling:** Fully built on TailwindCSS with no bulky runtime logic.
 - **Premium Intersections:** Borders and structural geometry define the layouts, giving a terminal-console, "blocky" feel.
 - **Deep-Linkable Explorer:** Filter the vault by category or search term, then share the resulting hash URL.
+- **Theme Lab:** A hideable overlay bar (on both pages) for live-testing primary, secondary and background colors against every component — selections persist between pages and sessions.
 
 ## Getting Started
 

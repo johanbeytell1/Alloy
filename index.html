@@ -29,7 +29,7 @@
         }
 
         .hero-glow {
-            background: radial-gradient(circle at 50% 50%, rgba(255, 149, 49, 0.08) 0%, transparent 60%);
+            background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-primary) 8%, transparent) 0%, transparent 60%);
         }
         
     </style>
@@ -71,10 +71,7 @@
 
     <main class="relative pt-24 min-h-screen grid-lines">
         <!-- Hero Section -->
-        <section class="max-w-[1440px] mx-auto border-x border-border min-h-[calc(100vh-96px)] flex flex-col items-center justify-center px-10 relative overflow-hidden">
-            <div class="absolute top-40 left-10 w-32 h-px bg-border"></div>
-            <div class="absolute bottom-40 right-10 w-32 h-px bg-border"></div>
-
+        <section class="max-w-[1440px] mx-auto border-x border-border min-h-[calc(100vh-96px)] flex flex-col items-center justify-center px-6 md:px-10 py-16 relative overflow-hidden">
             <div class="text-center relative z-10">
                 <div class="inline-flex items-center gap-3 px-4 py-2 border border-border bg-zinc-900/40 mb-12">
                     <span class="w-2 h-2 bg-primary animate-pulse"></span>
@@ -240,8 +237,8 @@
 
         <!-- Vault Expansion Section -->
         <section id="vault-expansion" class="max-w-[1440px] mx-auto border-x border-b border-border bg-zinc-950">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
-                <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-5">
+                <div class="lg:col-span-2 p-8 md:p-12 xl:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
                     <div class="absolute inset-0 grid-lines opacity-10"></div>
                     <div class="relative z-10">
                         <div class="inline-flex items-center gap-3 px-4 py-2 border border-primary/40 bg-primary/5 mb-8">
@@ -270,7 +267,7 @@
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
-                <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-px bg-border">
+                <div class="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-px bg-border">
                     <a href="components/index.html#toggles" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-toggle-on text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">04</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Toggles</div>
@@ -388,6 +385,43 @@
             <span>v1.1.0_PRODUCTION</span>
         </div>
     </footer>
+    <!-- Theme Lab Overlay -->
+    <div id="themeLab" class="fixed bottom-4 right-4 z-[90] w-72 max-w-[calc(100vw-2rem)] border border-border bg-zinc-950/95 backdrop-blur-md pixel-border">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-border bg-zinc-900/60">
+            <span class="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-zinc-300"><span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Theme Lab</span>
+            <button id="themeLabHide" class="w-6 h-6 flex items-center justify-center text-zinc-500 hover:text-white transition-colors" aria-label="Hide theme lab"><i class="bi bi-dash-lg text-xs"></i></button>
+        </div>
+        <div class="p-4 space-y-3">
+            <label class="flex items-center justify-between gap-4 cursor-pointer group">
+                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Primary</span>
+                <span class="flex items-center gap-3">
+                    <span data-theme-value="primary" class="text-[8px] font-mono text-zinc-600">#FF9531</span>
+                    <input type="color" data-theme-channel="primary" value="#ff9531" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Primary color" />
+                </span>
+            </label>
+            <label class="flex items-center justify-between gap-4 cursor-pointer group">
+                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Secondary</span>
+                <span class="flex items-center gap-3">
+                    <span data-theme-value="secondary" class="text-[8px] font-mono text-zinc-600">#18181B</span>
+                    <input type="color" data-theme-channel="secondary" value="#18181b" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Secondary surface color" />
+                </span>
+            </label>
+            <label class="flex items-center justify-between gap-4 cursor-pointer group">
+                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Background</span>
+                <span class="flex items-center gap-3">
+                    <span data-theme-value="background" class="text-[8px] font-mono text-zinc-600">#09090B</span>
+                    <input type="color" data-theme-channel="background" value="#09090b" class="w-8 h-8 border border-border bg-transparent p-0.5 cursor-pointer" aria-label="Background color" />
+                </span>
+            </label>
+        </div>
+        <div class="px-4 py-3 border-t border-border flex items-center justify-between">
+            <span class="text-[7px] font-black uppercase tracking-widest text-zinc-700">Live token preview</span>
+            <button id="themeLabReset" class="px-3 py-1.5 border border-border text-[7px] font-black uppercase tracking-widest text-zinc-400 hover:border-primary hover:text-primary transition-all">Reset</button>
+        </div>
+    </div>
+    <button id="themeLabOpen" class="hidden fixed bottom-4 right-4 z-[90] w-11 h-11 bg-primary text-zinc-950 flex items-center justify-center pixel-border hover:bg-white transition-colors" aria-label="Open theme lab"><i class="bi bi-palette2"></i></button>
+
+    <script src="./src/theme-lab.js"></script>
     <script>
         (function() {
             const btn = document.getElementById('mobileMenuBtn');

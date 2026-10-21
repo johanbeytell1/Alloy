@@ -4,13 +4,31 @@
 
 @theme{
     --color-primary: #ff9531;
+    --color-secondary: #18181b;
     --font-sans: 'Libre Franklin', sans-serif;
     --font-outfit: 'Outfit', sans-serif;
-    
+
     /* Pixel/Blocky structured layout colors - Dark Only */
     --color-border: #27272a;
     --color-bg: #09090b; /* zinc-950 */
     --color-bg-alt: #18181b; /* zinc-900 */
+
+    /* Industrial loader animations */
+    --animate-loader-trace: loader-trace 1.6s linear infinite;
+    --animate-progress-sheen: progress-sheen 1.8s ease-in-out infinite;
+    --animate-boot-grow: boot-grow 2.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+    @keyframes loader-trace {
+        0%, 60%, 100% { opacity: 0.12; }
+        15%, 35% { opacity: 1; }
+    }
+    @keyframes progress-sheen {
+        0% { transform: translateX(-110%); }
+        100% { transform: translateX(420%); }
+    }
+    @keyframes boot-grow {
+        from { width: 0; }
+    }
 }
 
 
@@ -18,7 +36,7 @@
     /* Custom Checkbox with Tailwind */
     input[type="checkbox"]:hover {
         @apply border-primary;
-        background-color: #ff9531;
+        background-color: var(--color-primary);
     }
 
     input[type="checkbox"]:checked {
