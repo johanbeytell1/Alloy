@@ -1,10 +1,19 @@
 # Alloy UI Component Library
 
-`V1.1.0 PRODUCTION` | Live UI demo and component explorer on [https://alloyui.netlify.app](https://alloyui.netlify.app) | Our website: [https://infinitode.netlify.app](https://infinitode.netlify.app)
+`V1.2.0 PRODUCTION` | Live UI demo and component explorer on [https://alloyui.netlify.app](https://alloyui.netlify.app) | Our website: [https://infinitode.netlify.app](https://infinitode.netlify.app)
 
 **Alloy** is a dark-mode-first UI component library with a square-edged, grid-aligned visual style. It is plain HTML plus Tailwind CSS v4 utilities — no JavaScript framework, no runtime dependencies.
 
 ## Recent Changes
+
+### v1.2.0
+
+Version 1.2 rolls up everything below: 17 new components (**150 total / 32 categories**), the plain-language copy pass and the contrast-aware Theme Lab — plus this release's polish:
+
+- **Landing page refresh:** new Theme Lab feature section with a panel mock and live contrast readouts; the New Components section now describes v1.2; the hero version badge and release chip are solid instead of translucent (text no longer competed with the glow and grid lines behind them).
+- **Accent clash handling:** if the chosen primary sits too close to the secondary surface or the background, the explorer sidebar's active filter automatically shifts to a distinguishable shade (with its own contrast-checked ink), and hover accents are now validated against the hover surface as well as the page background.
+- **Explorer search bar:** the input now uses an explicit themed text color, a primary-colored caret and primary selection highlight, so it follows Theme Lab changes like everything else.
+- **Versioning:** all version identifiers across the landing page, explorer, demo content, build metadata and this README now read v1.2.0.
 
 ### Patch — 17 new components & prebuilt page layouts
 

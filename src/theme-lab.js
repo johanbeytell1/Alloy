@@ -108,13 +108,30 @@
   }
 
   /* Nudge an accent color toward the page's ink until it reads at
-     WCAG AA (4.5:1) against the given background. Returns the color
-     unchanged when it is already legible. */
-  function readableAccent(color, bg) {
+     WCAG AA (4.5:1) against the background — and, when a secondary
+     surface is given, at 3:1 against that too (hover fills). Returns
+     the color unchanged when it is already legible. */
+  function readableAccent(color, bg, surface) {
     var ink = luminance(bg) > 0.45 ? '#000000' : '#ffffff';
     for (var t = 0; t <= 1.001; t += 0.05) {
       var candidate = mix(color, ink, t);
-      if (contrast(candidate, bg) >= 4.5) return candidate;
+      if (contrast(candidate, bg) >= 4.5 && (!surface || contrast(candidate, surface) >= 3)) {
+        return candidate;
+      }
+    }
+    return ink;
+  }
+
+  /* Shift a fill color toward the page's ink until it is visually
+     distinct from both the background and the secondary surface, so
+     active states (e.g. the sidebar filter) never blend in. */
+  function distinctFill(color, bg, surface) {
+    var ink = luminance(bg) > 0.45 ? '#000000' : '#ffffff';
+    for (var t = 0; t <= 1.001; t += 0.05) {
+      var candidate = mix(color, ink, t);
+      if (contrast(candidate, bg) >= 1.8 && contrast(candidate, surface) >= 1.8) {
+        return candidate;
+      }
     }
     return ink;
   }
@@ -172,7 +189,9 @@
       'html[data-primary-ink="light"] [class~="group"]:hover [class~="group-hover:bg-primary"] { color: ' + LIGHT_INK + ' !important; }',
       '/* Hover accents (sidebar filters, links, tiles) use a contrast-checked primary */',
       'html[data-theme-mode] [class~="hover:text-primary"]:hover,',
-      'html[data-theme-mode] [class~="group"]:hover [class~="group-hover:text-primary"] { color: var(--tl-readable-primary, var(--color-primary)) !important; }'
+      'html[data-theme-mode] [class~="group"]:hover [class~="group-hover:text-primary"] { color: var(--tl-readable-primary, var(--color-primary)) !important; }',
+      '/* Active sidebar filter uses a fill guaranteed to stand out from the surfaces */',
+      'html[data-theme-mode] [class~="type-filter-btn"][class~="bg-primary"] { background-color: var(--tl-sidebar-fill, var(--color-primary)) !important; border-color: var(--tl-sidebar-fill, var(--color-primary)) !important; color: var(--tl-sidebar-ink, ' + DARK_INK + ') !important; }'
     ].join('\n');
     var style = document.createElement('style');
     style.id = 'themeLabRules';
@@ -225,9 +244,27 @@
     var inkMode = contrast(primary, DARK_INK) >= contrast(primary, LIGHT_INK) ? 'dark' : 'light';
     root.setAttribute('data-primary-ink', inkMode);
 
-    /* Hover accents must stay legible against the page background:
-       darken (light mode) or lighten (dark mode) the primary as needed. */
-    root.style.setProperty('--tl-readable-primary', readableAccent(primary, bg));
+    /* The surface the sidebar and hover fills actually use right now. */
+    var surface = state.secondary
+      ? state.secondary
+      : (state.background
+          ? mix(bg, isLight ? '#000000' : '#ffffff', RAMP['--color-bg-alt'])
+          : CHANNELS.secondary.fallback);
+
+    /* Hover accents must stay legible against the page background AND
+       the secondary hover surface: darken (light mode) or lighten
+       (dark mode) the primary as needed. */
+    root.style.setProperty('--tl-readable-primary', readableAccent(primary, bg, surface));
+
+    /* If the primary sits too close to the secondary surface or the
+       background, active fills (sidebar filter) shift to a shade that
+       still stands out; otherwise they use the primary unchanged. */
+    var fill = (contrast(primary, surface) < 1.6 || contrast(primary, bg) < 1.6)
+      ? distinctFill(primary, bg, surface)
+      : primary;
+    root.style.setProperty('--tl-sidebar-fill', fill);
+    root.style.setProperty('--tl-sidebar-ink',
+      contrast(fill, DARK_INK) >= contrast(fill, LIGHT_INK) ? DARK_INK : LIGHT_INK);
   }
 
   /* ---------- UI ---------- */

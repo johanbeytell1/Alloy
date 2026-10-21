@@ -73,9 +73,9 @@
         <!-- Hero Section -->
         <section class="max-w-[1440px] mx-auto border-x border-border min-h-[calc(100vh-96px)] flex flex-col items-center justify-center px-6 md:px-10 py-16 relative overflow-hidden">
             <div class="text-center relative z-10">
-                <div class="inline-flex items-center gap-3 px-4 py-2 border border-border bg-zinc-900/40 mb-12">
+                <div class="inline-flex items-center gap-3 px-4 py-2 border border-border bg-zinc-900 mb-12">
                     <span class="w-2 h-2 bg-primary animate-pulse"></span>
-                    <span class="text-[10px] font-black tracking-[0.3em] uppercase opacity-70">Version 1.1.0</span>
+                    <span class="text-[10px] font-black tracking-[0.3em] uppercase text-zinc-300">Version 1.2.0</span>
                 </div>
 
                 <h1 class="text-[clamp(3rem,10vw,10rem)] font-black font-outfit tracking-[calc(-0.06em)] leading-[0.85] mb-12">
@@ -241,12 +241,12 @@
                 <div class="lg:col-span-2 p-8 md:p-12 xl:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
                     <div class="absolute inset-0 grid-lines opacity-10"></div>
                     <div class="relative z-10">
-                        <div class="inline-flex items-center gap-3 px-4 py-2 border border-primary/40 bg-primary/5 mb-8">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 border border-primary/40 bg-[color-mix(in_srgb,var(--color-primary)_8%,var(--color-bg))] mb-8">
                             <span class="w-2 h-2 bg-primary animate-pulse"></span>
-                            <span class="text-[9px] font-black tracking-[0.3em] uppercase text-primary">V1.1.0 // New Components</span>
+                            <span class="text-[9px] font-black tracking-[0.3em] uppercase text-primary">V1.2.0 // New Components</span>
                         </div>
-                        <h2 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-8">77 New <br><span class="text-primary">Components.</span></h2>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md mb-10">Fourteen new categories: toggles, indicators, loaders, overlays, pagination, stats, bento grids, blog layouts, integrations, newsletters, process, team, FAQ and full app shells.</p>
+                        <h2 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-8">17 New <br><span class="text-primary">Components.</span></h2>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md mb-10">Version 1.2 adds three new categories — timelines & activity, empty states and files & media — plus a command palette, toast stack, verification code input and three prebuilt page layouts.</p>
                         <div class="grid grid-cols-3 gap-px bg-border border border-border mb-10">
                             <div class="bg-bg p-4">
                                 <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Components</div>
@@ -361,6 +361,57 @@
             </div>
         </section>
 
+        <!-- Theme Lab Section -->
+        <section class="max-w-[1440px] mx-auto border-x border-b border-border bg-bg/50">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-8 md:p-12 lg:p-20 flex flex-col justify-center border-b md:border-b-0 md:border-r border-border">
+                    <div class="inline-flex self-start items-center gap-3 px-4 py-2 border border-border bg-zinc-900 mb-8">
+                        <i class="bi bi-palette2 text-primary text-xs"></i>
+                        <span class="text-[9px] font-black tracking-[0.3em] uppercase text-zinc-300">Theme Lab</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-8">Recolor <br>everything <span class="text-primary">live.</span></h2>
+                    <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md mb-10">Pick a primary, surface and background color from the panel in the corner. The contrast engine re-derives the neutral ramp and switches text ink automatically, so every component stays legible — even on light backgrounds.</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="components/index.html" class="px-8 py-4 bg-primary text-zinc-950 text-[10px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Test it on 150 components</a>
+                    </div>
+                </div>
+                <div class="relative bg-zinc-950 p-8 md:p-12 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 grid-lines opacity-10"></div>
+                    <div class="relative z-10 w-full max-w-sm border border-border bg-bg pixel-border">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-border bg-zinc-900">
+                            <span class="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] text-zinc-300"><span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Theme Lab</span>
+                            <i class="bi bi-dash-lg text-xs text-zinc-500"></i>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500">Primary</span>
+                                <span class="flex items-center gap-3"><span class="text-[8px] font-mono text-zinc-600">#FF9531</span><span class="w-7 h-7 bg-primary border border-border"></span></span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500">Secondary</span>
+                                <span class="flex items-center gap-3"><span class="text-[8px] font-mono text-zinc-600">#18181B</span><span class="w-7 h-7 bg-zinc-900 border border-border"></span></span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500">Background</span>
+                                <span class="flex items-center gap-3"><span class="text-[8px] font-mono text-zinc-600">#09090B</span><span class="w-7 h-7 bg-zinc-950 border border-border"></span></span>
+                            </div>
+                            <div class="pt-4 border-t border-border">
+                                <div class="text-[7px] font-black uppercase tracking-widest text-zinc-600 mb-3">Contrast engine</div>
+                                <div class="flex items-center justify-between text-[8px] font-black uppercase tracking-widest">
+                                    <span class="text-zinc-400">Ink on primary</span>
+                                    <span class="text-emerald-500">AA 8.1:1</span>
+                                </div>
+                                <div class="flex items-center justify-between text-[8px] font-black uppercase tracking-widest mt-2">
+                                    <span class="text-zinc-400">Hover accent</span>
+                                    <span class="text-emerald-500">AA 4.6:1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Final Call Section -->
         <section class="max-w-[1440px] mx-auto border-x border-border py-20 md:py-40 text-center px-6 md:px-10">
             <h2 class="text-3xl sm:text-5xl md:text-7xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-16 italic opacity-20">BUILD SOMETHING THAT LASTS.</h2>
@@ -397,7 +448,7 @@
         </div>
         <div class="max-w-[1440px] mx-auto mt-20 pt-10 border-t border-zinc-900 flex justify-between items-center text-[10px] font-black text-zinc-700 uppercase tracking-[0.2em]">
             <span>&copy; 2026 INFINITODE</span>
-            <span>v1.1.0_PRODUCTION</span>
+            <span>v1.2.0_PRODUCTION</span>
         </div>
     </footer>
     <!-- Theme Lab Overlay -->
