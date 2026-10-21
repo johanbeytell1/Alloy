@@ -25,7 +25,7 @@
       overflow-y: auto;
       overflow-x: hidden;
       scrollbar-width: thin;
-      scrollbar-color: #ff9531 transparent;
+      scrollbar-color: var(--color-primary) transparent;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
     .scrollbar-hide::-webkit-scrollbar {
@@ -61,12 +61,12 @@
             ALLOY
           </h1>
           <div class="mt-3 flex items-center justify-between">
-            <span class="text-[8px] font-black uppercase tracking-widest text-zinc-600">V1.1 // Expanded Vault</span>
-            <span class="flex items-center gap-1.5 text-[8px] font-black uppercase tracking-widest text-emerald-500"><span class="w-1 h-1 bg-emerald-500"></span>133 Foundations</span>
+            <span class="text-[8px] font-black uppercase tracking-widest text-zinc-600">V1.1 // Component Library</span>
+            <span class="flex items-center gap-1.5 text-[8px] font-black uppercase tracking-widest text-emerald-500"><span class="w-1 h-1 bg-emerald-500"></span>133 Components</span>
           </div>
           <div class="mt-6 flex items-center gap-3 border border-border bg-zinc-900/50 px-4 py-3 focus-within:border-primary transition-all">
             <i class="bi bi-search text-zinc-500 text-xs"></i>
-            <input id="componentSearch" type="search" placeholder="FILTER FOUNDATIONS..." class="w-full bg-transparent text-xs font-bold uppercase tracking-widest outline-none placeholder:text-zinc-600" />
+            <input id="componentSearch" type="search" placeholder="SEARCH COMPONENTS..." class="w-full bg-transparent text-xs font-bold uppercase tracking-widest outline-none placeholder:text-zinc-600" />
           </div>
         </div>
         
@@ -75,7 +75,7 @@
             <p class="px-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-600 mb-4">Elements</p>
             <div class="space-y-1">
               <button data-type="all" class="type-filter-btn flex w-full items-center justify-between px-4 py-3 text-left text-xs font-black uppercase tracking-widest transition-all border border-transparent hover:border-border hover:bg-bg-alt hover:text-primary">
-                <span>All Foundations</span>
+                <span>All Components</span>
                 <span class="text-[10px] text-zinc-600" data-count="all">0</span>
               </button>
               <button data-type="buttons" class="type-filter-btn flex w-full items-center justify-between px-4 py-3 text-left text-xs font-black uppercase tracking-widest transition-all border border-transparent hover:border-border hover:bg-bg-alt hover:text-primary">
@@ -213,7 +213,7 @@
       <div class="relative max-w-[1440px] mx-auto min-h-full border-x border-border bg-bg/40 backdrop-blur-[1px] overflow-x-hidden">
         <div class="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur px-6 md:px-8 py-4 md:py-6 flex justify-between items-center">
             <div>
-                <h2 class="text-2xl md:text-3xl font-black font-outfit tracking-tighter uppercase">Vault Explorer</h2>
+                <h2 class="text-2xl md:text-3xl font-black font-outfit tracking-tighter uppercase">Component Explorer</h2>
                 <p id="resultsSummary" class="text-[10px] font-bold text-zinc-500 tracking-[0.3em] uppercase mt-1">Showing all variants</p>
             </div>
             <button id="sidebarToggle" class="md:hidden text-2xl text-zinc-300 hover:text-white"><i class="bi bi-list"></i></button>
@@ -244,7 +244,7 @@
                         <div class="flex items-center gap-4 md:gap-8 h-full">
                             <div class="font-black text-base md:text-xl tracking-tighter text-white shrink-0">ALLOY.DOCS</div>
                             <div class="hidden md:flex h-full items-center">
-                                <a href="#" class="h-full flex items-center px-6 border-x border-border hover:bg-zinc-900 transition-colors">Foundations</a>
+                                <a href="#" class="h-full flex items-center px-6 border-x border-border hover:bg-zinc-900 transition-colors">Guides</a>
                                 <a href="#" class="h-full flex items-center px-6 border-r border-border hover:bg-zinc-900 transition-colors">Components</a>
                                 <a href="#" class="h-full flex items-center px-6 border-r border-border hover:bg-zinc-900 transition-colors">Templates</a>
                             </div>
@@ -284,7 +284,7 @@
                     <nav class="flex items-center justify-between px-4 py-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full">
                         <div class="font-black text-white italic">A.</div>
                         <div class="flex gap-4">
-                            <a href="#" class="text-[10px] font-black uppercase text-white/60 hover:text-white">Vault</a>
+                            <a href="#" class="text-[10px] font-black uppercase text-white/60 hover:text-white">Library</a>
                             <a href="#" class="text-[10px] font-black uppercase text-white/60 hover:text-white">Logic</a>
                             <a href="#" class="text-[10px] font-black uppercase text-white/60 hover:text-white">Core</a>
                         </div>
@@ -353,7 +353,7 @@
           <article data-type="buttons" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Action Elements</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Buttons</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -435,7 +435,7 @@
           <article data-type="badges" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Status Tags</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Badges</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
             
@@ -487,7 +487,7 @@
           <article data-type="inputs" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Data Entry</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Inputs</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -604,7 +604,7 @@
           <article data-type="toggles" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Control Switches</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Toggles & Switches</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -762,7 +762,7 @@
           <article data-type="indicators" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Telemetry Indicators</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Indicators</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -859,9 +859,9 @@
                 </div>
 
                 <!-- Variant 3: Identity Stack -->
-                <div class="variant-item" data-variant="Operator Stack" data-keywords="avatar stack users team identity online">
+                <div class="variant-item" data-variant="Avatar Stack" data-keywords="avatar stack users team identity online">
                     <div class="flex justify-between items-center mb-6">
-                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">03 OPERATOR_STACK</p>
+                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">03 AVATAR_STACK</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-zinc-950 transition-all">SOURCE</button>
                     </div>
                     <div class="preview-area border border-border bg-bg p-6 md:p-12">
@@ -873,7 +873,7 @@
                                 <div class="w-12 h-12 bg-zinc-900 border-2 border-bg flex items-center justify-center text-zinc-500 font-black text-[10px] -ml-3 relative z-0">+08</div>
                             </div>
                             <div class="flex-1 sm:border-l border-border sm:pl-8">
-                                <div class="text-[10px] font-black uppercase tracking-widest text-white mb-1">Active Operators</div>
+                                <div class="text-[10px] font-black uppercase tracking-widest text-white mb-1">Active Users</div>
                                 <div class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">3 online // 8 standing by // 2 alerts</div>
                             </div>
                             <button class="w-full sm:w-auto px-6 py-3 border border-border text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:border-primary hover:text-primary transition-all">Manage</button>
@@ -977,8 +977,8 @@
                             <span class="absolute top-0 left-0 w-2 h-2 bg-primary animate-loader-trace" style="animation-delay:-0.2s"></span>
                         </div>
                         <div class="text-center">
-                            <div class="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-2">Compiling Core</div>
-                            <div class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">Do not terminate the process</div>
+                            <div class="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-2">Loading</div>
+                            <div class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">This may take a few seconds</div>
                         </div>
                     </div>
                 </div>
@@ -1045,7 +1045,7 @@
           <article data-type="overlays" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Overlay Layer</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Overlays</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -1124,7 +1124,7 @@
                                             <span class="text-[8px] font-mono text-zinc-700">STG</span>
                                         </button>
                                         <button class="w-full flex items-center justify-between px-5 py-3 hover:bg-zinc-900 transition-colors">
-                                            <span class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-zinc-400"><span class="w-2 h-2 bg-zinc-600"></span> Cold Vault</span>
+                                            <span class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-zinc-400"><span class="w-2 h-2 bg-zinc-600"></span> Cold Storage</span>
                                             <span class="text-[8px] font-mono text-zinc-700">CLD</span>
                                         </button>
                                     </div>
@@ -1139,10 +1139,10 @@
                     </div>
                 </div>
 
-                <!-- Variant 3: Operator Popover -->
-                <div class="variant-item" data-variant="Operator Popover" data-keywords="popover card profile hover user">
+                <!-- Variant 3: Profile Popover -->
+                <div class="variant-item" data-variant="Profile Popover" data-keywords="popover card profile hover user">
                     <div class="flex justify-between items-center mb-6">
-                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">03 OPERATOR_POPOVER</p>
+                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">03 PROFILE_POPOVER</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-zinc-950 transition-all">SOURCE</button>
                     </div>
                     <div class="preview-area border border-border bg-bg p-8 md:p-16">
@@ -1153,7 +1153,7 @@
                             <div class="px-6 pb-6">
                                 <div class="w-16 h-16 bg-primary border-4 border-zinc-950 flex items-center justify-center text-zinc-950 font-black text-lg -mt-8 mb-4 relative z-10">MR</div>
                                 <div class="text-sm font-black font-outfit uppercase tracking-tight">Marcus Reeve</div>
-                                <div class="text-[9px] font-bold uppercase tracking-widest text-zinc-500 mt-1">Core Operator // Sector 04</div>
+                                <div class="text-[9px] font-bold uppercase tracking-widest text-zinc-500 mt-1">Product Engineer // Core Team</div>
                                 <div class="grid grid-cols-3 gap-px bg-border border border-border mt-6">
                                     <div class="bg-zinc-950 p-3 text-center">
                                         <div class="text-xs font-black">128</div>
@@ -1207,7 +1207,7 @@
                                 <div class="border-t border-border py-2">
                                     <button class="w-full flex items-center gap-3 px-4 py-3 hover:bg-rose-500/10 transition-colors group">
                                         <i class="bi bi-trash3 text-rose-500"></i>
-                                        <span class="text-[9px] font-black uppercase tracking-widest text-rose-500">Purge Node</span>
+                                        <span class="text-[9px] font-black uppercase tracking-widest text-rose-500">Delete Item</span>
                                     </button>
                                 </div>
                             </div>
@@ -1221,7 +1221,7 @@
           <article data-type="pagination" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Paging Systems</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Pagination</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -1307,7 +1307,7 @@
           <article data-type="heroes" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Immersive Heroes</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Hero Sections</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -1368,11 +1368,11 @@
                     </div>
                     <div class="preview-area layout-full-scroll border-2 border-border grid-lines p-6 md:p-12">
                         <section class="max-w-4xl mx-auto py-12 md:py-24 px-6 md:px-12 bg-bg border border-border">
-                            <p class="text-2xl sm:text-4xl md:text-6xl font-black font-outfit uppercase leading-tight mb-8 md:mb-16 italic">"We built an industrial foundation for the next generation of digital architecture."</p>
+                            <p class="text-2xl sm:text-4xl md:text-6xl font-black font-outfit uppercase leading-tight mb-8 md:mb-16 italic">"We rebuilt four product dashboards on this component library without writing custom CSS."</p>
                             <div class="h-2 w-24 bg-primary px-4 mb-8"></div>
                             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
                                 <div class="text-[10px] font-black uppercase text-zinc-600">ALLOY_v1.1.0</div>
-                                <button class="text-primary font-black uppercase tracking-widest border-b-2 border-primary text-[10px] sm:text-xs">Explore Foundations</button>
+                                <button class="text-primary font-black uppercase tracking-widest border-b-2 border-primary text-[10px] sm:text-xs">Explore Components</button>
                             </div>
                         </section>
                     </div>
@@ -1410,7 +1410,7 @@
                                  </div>
                              </div>
                              <div class="p-6 text-emerald-500 text-xs leading-relaxed">
-                                 <p class="mb-2"><span class="text-zinc-500">$</span> alloy init --foundation</p>
+                                 <p class="mb-2"><span class="text-zinc-500">$</span> alloy init --components</p>
                                  <p class="mb-2">[OK] Scoping architecture...</p>
                                  <p class="mb-2 font-black text-white italic">[DONE] Core logic established.</p>
                                  <p class="mb-4 text-primary animate-pulse">_</p>
@@ -1430,9 +1430,9 @@
                         <section class="flex flex-col lg:grid lg:grid-cols-2 bg-bg">
                             <div class="p-6 sm:p-10 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border">
                                 <h2 class="text-2xl sm:text-4xl font-black font-outfit uppercase italic tracking-tighter leading-none mb-5">Structural <br>Integrity_</h2>
-                                <p class="text-zinc-500 text-sm font-bold uppercase tracking-widest leading-relaxed mb-8">Building foundations that scale with your logic, not just your layout.</p>
+                                <p class="text-zinc-500 text-sm font-bold uppercase tracking-widest leading-relaxed mb-8">Components that scale with your product, not just your layout.</p>
                                 <div class="flex gap-4">
-                                     <button class="px-6 py-3 bg-primary text-bg font-black uppercase text-xs">Initialize</button>
+                                     <button class="px-6 py-3 bg-primary text-bg font-black uppercase text-xs">Get Started</button>
                                 </div>
                             </div>
                             <div class="bg-zinc-900 relative flex items-center justify-center p-8 overflow-hidden min-h-[200px]">
@@ -1459,14 +1459,14 @@
                         <div class="relative z-10">
                             <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
                                 <span class="inline-flex items-center gap-2 px-3 py-1 border border-primary/40 text-primary text-[8px] font-black uppercase tracking-widest">
-                                    <span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Foundation v1.1.0
+                                    <span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Alloy v1.1.0
                                 </span>
                                 <span class="text-[8px] font-black uppercase tracking-[0.3em] text-zinc-600">133 components // 29 blocks</span>
                             </div>
-                            <h3 class="text-[clamp(2.5rem,8vw,7rem)] font-black font-outfit uppercase tracking-tighter leading-[0.82] italic mb-8 max-w-4xl">The grid <br>is the <span class="text-primary">product.</span></h3>
+                            <h3 class="text-[clamp(2.5rem,8vw,7rem)] font-black font-outfit uppercase tracking-tighter leading-[0.82] italic mb-8 max-w-4xl">Built on <br>a strict <span class="text-primary">grid.</span></h3>
                             <div class="flex flex-col md:flex-row gap-4 md:items-center mb-12">
-                                <a href="#" class="px-8 py-4 bg-primary text-zinc-950 text-[10px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Enter the Vault</a>
-                                <a href="#" class="px-8 py-4 border-2 border-border text-[10px] font-black uppercase tracking-widest text-zinc-300 text-center hover:border-primary hover:text-primary transition-all">Read the Protocol</a>
+                                <a href="#" class="px-8 py-4 bg-primary text-zinc-950 text-[10px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Browse Components</a>
+                                <a href="#" class="px-8 py-4 border-2 border-border text-[10px] font-black uppercase tracking-widest text-zinc-300 text-center hover:border-primary hover:text-primary transition-all">Read the Docs</a>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border">
                                 <div class="bg-zinc-950 p-5">
@@ -1496,11 +1496,11 @@
                         <div class="p-6 md:p-10 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
                             <div class="absolute inset-0 grid-lines opacity-10"></div>
                             <div class="relative z-10">
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">System Ready</span>
-                                <h3 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-6">Boot <br>the <br>core.</h3>
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">A dark-only foundation for interfaces that need to survive production, not win a moodboard.</p>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">Ready to Use</span>
+                                <h3 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-6">Build <br>dark <br>interfaces.</h3>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">A dark-only component set built for production interfaces.</p>
                                 <div class="flex flex-col sm:flex-row gap-3">
-                                    <a href="#" class="px-6 py-3.5 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Initialize</a>
+                                    <a href="#" class="px-6 py-3.5 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Get Started</a>
                                     <a href="#" class="px-6 py-3.5 border border-border text-[9px] font-black uppercase tracking-widest text-zinc-400 text-center hover:border-primary hover:text-primary transition-all">Documentation</a>
                                 </div>
                             </div>
@@ -1534,7 +1534,7 @@
           <article data-type="features" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Foundations</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Feature Sections</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -1549,7 +1549,7 @@
                         <div class="p-12 border-b md:border-b-0 md:border-r border-border hover:bg-zinc-900 transition-all text-white">
                             <div class="w-12 h-12 bg-primary flex items-center justify-center font-black text-zinc-950 mb-8 font-outfit">A</div>
                             <h4 class="text-xl font-bold mb-4 uppercase">Logic Driven</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">Components following a strict mathematical foundation.</p>
+                            <p class="text-zinc-500 text-sm leading-relaxed">Components that follow a strict spacing system.</p>
                         </div>
                         <div class="p-12 border-b md:border-b-0 md:border-r border-border hover:bg-zinc-900 transition-all text-white">
                             <div class="w-12 h-12 bg-zinc-800 flex items-center justify-center font-black text-white mb-8 font-outfit">B</div>
@@ -1733,7 +1733,7 @@
           <article data-type="stats" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Metrics & Telemetry</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Stats & Metrics</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -1930,7 +1930,7 @@
                         </div>
                         <div class="md:col-span-2 bg-zinc-950 p-8 flex items-center justify-between gap-6">
                             <div>
-                                <div class="text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Foundation Tokens</div>
+                                <div class="text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Color Tokens</div>
                                 <div class="flex items-center gap-2">
                                     <span class="w-6 h-6 bg-primary border border-white/10"></span>
                                     <span class="w-6 h-6 bg-zinc-900 border border-border"></span>
@@ -1943,10 +1943,10 @@
                         </div>
                         <div class="bg-primary p-8 flex flex-col justify-between min-h-[140px] group cursor-pointer">
                             <div class="flex items-center justify-between">
-                                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-950/60">Deploy Now</span>
+                                <span class="text-[8px] font-black uppercase tracking-widest text-zinc-950/60">Get Started</span>
                                 <i class="bi bi-arrow-right text-zinc-950 group-hover:translate-x-1 transition-transform"></i>
                             </div>
-                            <div class="text-xl font-black font-outfit uppercase tracking-tighter text-zinc-950 leading-none">Initialize <br>the vault.</div>
+                            <div class="text-xl font-black font-outfit uppercase tracking-tighter text-zinc-950 leading-none">Start <br>building.</div>
                         </div>
                     </div>
                 </div>
@@ -2081,7 +2081,7 @@
           <article data-type="pricing" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Unit Pricing</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Pricing</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -2096,7 +2096,7 @@
                         <div class="p-12 bg-bg">
                             <h4 class="text-xs font-black text-zinc-600 uppercase mb-8">Node // 01</h4>
                             <div class="text-4xl font-black mb-8 italic">$0</div>
-                            <button class="w-full py-4 border border-zinc-800 text-zinc-600 font-black text-[10px] uppercase tracking-widest">Initialize</button>
+                            <button class="w-full py-4 border border-zinc-800 text-zinc-600 font-black text-[10px] uppercase tracking-widest">Get Started</button>
                         </div>
                         <div class="p-12 bg-bg border-x-4 border-x-primary">
                             <h4 class="text-xs font-black text-primary uppercase mb-8">Core // 02</h4>
@@ -2119,7 +2119,7 @@
                     </div>
                     <div class="preview-area border border-border">
                         <div class="grid grid-cols-2 border-b border-border">
-                            <div class="p-6 font-black uppercase text-[10px] border-r border-border text-zinc-500">Foundations</div>
+                            <div class="p-6 font-black uppercase text-[10px] border-r border-border text-zinc-500">Features</div>
                             <div class="p-6 text-center text-primary font-black uppercase text-[10px]">Included</div>
                         </div>
                         <div class="grid grid-cols-2 border-b border-border">
@@ -2222,7 +2222,7 @@
                                     <ul class="space-y-3 mb-8">
                                         <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-400"><i class="bi bi-check2 text-primary"></i> 133 core components</li>
                                         <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-400"><i class="bi bi-check2 text-primary"></i> 42 layout blocks</li>
-                                        <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-400"><i class="bi bi-check2 text-primary"></i> Single operator</li>
+                                        <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-400"><i class="bi bi-check2 text-primary"></i> Single user</li>
                                     </ul>
                                     <button class="w-full py-4 border border-border text-[9px] font-black uppercase tracking-widest text-zinc-300 hover:border-primary hover:text-primary transition-all">Select Node</button>
                                 </div>
@@ -2233,7 +2233,7 @@
                                     <div class="text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-8">Billed annually // $1,188</div>
                                     <ul class="space-y-3 mb-8">
                                         <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-300"><i class="bi bi-check2 text-primary"></i> Everything in Node</li>
-                                        <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-300"><i class="bi bi-check2 text-primary"></i> Unlimited operators</li>
+                                        <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-300"><i class="bi bi-check2 text-primary"></i> Unlimited users</li>
                                         <li class="flex items-center gap-3 text-[9px] font-bold uppercase tracking-widest text-zinc-300"><i class="bi bi-check2 text-primary"></i> Priority patch channel</li>
                                     </ul>
                                     <button class="w-full py-4 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors">Select Core</button>
@@ -2292,7 +2292,7 @@
           <article data-type="tables" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Data Structures</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Tables</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -2406,8 +2406,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Variant 4: Operator Leaderboard -->
-                <div class="variant-item" data-variant="Operator Leaderboard" data-keywords="table leaderboard ranking operators score">
+                <!-- Variant 4: User Leaderboard -->
+                <div class="variant-item" data-variant="User Leaderboard" data-keywords="table leaderboard ranking users score">
                     <div class="flex justify-between items-center mb-6">
                         <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">04 LEADERBOARD</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-zinc-950 transition-all">SOURCE</button>
@@ -2425,7 +2425,7 @@
                                 <thead>
                                     <tr class="border-b border-border bg-zinc-900/40">
                                         <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600 w-16">Rank</th>
-                                        <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600">Operator</th>
+                                        <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600">User</th>
                                         <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600">Division</th>
                                         <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600 text-right">Deploys</th>
                                         <th class="p-5 text-[8px] font-black uppercase tracking-widest text-zinc-600 text-right">Score</th>
@@ -2549,7 +2549,7 @@
                             <div class="grid grid-cols-12 gap-3 px-5 py-3 items-center hover:bg-zinc-900/60 transition-colors">
                                 <div class="col-span-3 sm:col-span-2 text-[8px] font-mono text-zinc-600">13:52:11</div>
                                 <div class="col-span-3 sm:col-span-2 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-zinc-600"></span><span class="text-[7px] font-black uppercase tracking-widest text-zinc-500">System</span></div>
-                                <div class="col-span-6 sm:col-span-6 text-[9px] font-bold uppercase tracking-widest text-zinc-400">Scheduled vault snapshot complete</div>
+                                <div class="col-span-6 sm:col-span-6 text-[9px] font-bold uppercase tracking-widest text-zinc-400">Scheduled database snapshot complete</div>
                                 <div class="col-span-12 sm:col-span-2 text-left sm:text-right text-[7px] font-mono text-zinc-700">SNAP_024</div>
                             </div>
                         </div>
@@ -2566,7 +2566,7 @@
           <article data-type="cta" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Incentives</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Call To Action</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -2581,7 +2581,7 @@
                         <div class="absolute inset-0 grid-lines opacity-10"></div>
                         <h3 class="text-4xl md:text-6xl font-black font-outfit tracking-tighter mb-8 uppercase relative z-10 italic">Engineered <br>for builders.</h3>
                         <div class="flex justify-center gap-4 relative z-10">
-                            <button class="px-10 py-5 bg-zinc-950 text-primary font-black uppercase text-xs">Initialize Explorer</button>
+                            <button class="px-10 py-5 bg-zinc-950 text-primary font-black uppercase text-xs">Open the Explorer</button>
                         </div>
                     </div>
                 </div>
@@ -2610,11 +2610,11 @@
                     </div>
                     <div class="preview-area border-2 border-border grid md:grid-cols-2">
                         <div class="p-12 lg:p-16 flex flex-col justify-center bg-bg">
-                            <h4 class="text-3xl font-black uppercase font-outfit mb-4 text-white">System Logs.</h4>
-                            <p class="text-zinc-500 text-xs font-bold leading-relaxed mb-8">Subscribe to get notifications about protocol implementations and component updates.</p>
+                            <h4 class="text-3xl font-black uppercase font-outfit mb-4 text-white">Release Notes.</h4>
+                            <p class="text-zinc-500 text-xs font-bold leading-relaxed mb-8">Subscribe to get notified about new components and updates.</p>
                             <div class="flex">
-                                <input type="email" placeholder="Your Terminal Address" class="w-full bg-zinc-900 border border-border p-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary">
-                                <button class="px-8 py-4 bg-primary text-zinc-950 font-black text-[10px] uppercase hover:bg-white transition-colors">Listen</button>
+                                <input type="email" placeholder="Your email address" class="w-full bg-zinc-900 border border-border p-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary">
+                                <button class="px-8 py-4 bg-primary text-zinc-950 font-black text-[10px] uppercase hover:bg-white transition-colors">Subscribe</button>
                             </div>
                         </div>
                         <div class="p-12 bg-zinc-950 border-t md:border-t-0 md:border-l border-border flex items-center justify-center overflow-hidden relative">
@@ -2636,9 +2636,9 @@
                     <div class="preview-area border border-border bg-bg">
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 px-5 py-4 border-l-4 border-primary bg-primary/5">
                             <span class="flex items-center gap-2 text-[7px] font-black uppercase tracking-widest text-primary shrink-0"><span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> New Release</span>
-                            <p class="flex-1 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-zinc-300">v1.1.0 ships 77 new foundations across 14 new blocks.</p>
+                            <p class="flex-1 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-zinc-300">v1.1.0 ships 77 new components across 14 new categories.</p>
                             <div class="flex items-center gap-2 shrink-0">
-                                <a href="#" class="px-4 py-2 bg-primary text-zinc-950 text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors">Inspect Vault</a>
+                                <a href="#" class="px-4 py-2 bg-primary text-zinc-950 text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors">View Release</a>
                                 <button class="w-8 h-8 flex items-center justify-center text-zinc-500 hover:text-white transition-colors" aria-label="Dismiss"><i class="bi bi-x"></i></button>
                             </div>
                         </div>
@@ -2654,8 +2654,8 @@
                     <div class="preview-area border border-border bg-zinc-950 p-6 md:p-16 relative overflow-hidden">
                         <div class="absolute inset-0 grid-lines opacity-10"></div>
                         <div class="relative z-10 max-w-3xl mx-auto text-center">
-                            <span class="text-[8px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">Protocol Launch</span>
-                            <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-8">The vault opens <br>in.</h4>
+                            <span class="text-[8px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">Release Countdown</span>
+                            <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-8">The next release <br>arrives in.</h4>
                             <div class="flex items-center justify-center gap-2 md:gap-4 mb-10">
                                 <div class="border border-border bg-bg px-3 py-4 md:px-6 md:py-5 min-w-[64px] md:min-w-[100px]">
                                     <div class="text-2xl md:text-4xl font-black font-outfit italic text-white">04</div>
@@ -2687,7 +2687,7 @@
           <article data-type="blog" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Editorial Content</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Articles & Blog</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -2701,8 +2701,8 @@
                     <div class="preview-area border border-border bg-bg">
                         <div class="p-6 md:p-10 border-b border-border flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                             <div>
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4 block">System Log</span>
-                                <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none">Latest transmissions.</h4>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4 block">Blog</span>
+                                <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none">Latest articles.</h4>
                             </div>
                             <a href="#" class="text-[9px] font-black uppercase tracking-widest text-zinc-500 hover:text-primary transition-colors">All entries <i class="bi bi-arrow-right ml-2"></i></a>
                         </div>
@@ -2717,8 +2717,8 @@
                                     <div class="flex items-center gap-3 text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-4">
                                         <span>2026.10.14</span><span class="w-3 h-px bg-zinc-700"></span><span>04 MIN</span>
                                     </div>
-                                    <h5 class="text-base font-black uppercase tracking-tight leading-tight mb-4 group-hover:text-primary transition-colors">Alloy v1.1 expands the layout vault</h5>
-                                    <p class="text-[10px] font-bold text-zinc-500 leading-relaxed mb-6">New stats, bento, FAQ, process and app-shell structures join the foundation.</p>
+                                    <h5 class="text-base font-black uppercase tracking-tight leading-tight mb-4 group-hover:text-primary transition-colors">Alloy v1.1 adds 77 new components</h5>
+                                    <p class="text-[10px] font-bold text-zinc-500 leading-relaxed mb-6">New stats, bento, FAQ, process and app-shell structures join the library.</p>
                                     <span class="inline-flex items-center gap-3 text-[8px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-primary transition-colors">Read entry <i class="bi bi-arrow-right"></i></span>
                                 </div>
                             </article>
@@ -2748,7 +2748,7 @@
                                         <span>2026.09.18</span><span class="w-3 h-px bg-zinc-700"></span><span>03 MIN</span>
                                     </div>
                                     <h5 class="text-base font-black uppercase tracking-tight leading-tight mb-4 group-hover:text-primary transition-colors">Zero runtime, full interaction</h5>
-                                    <p class="text-[10px] font-bold text-zinc-500 leading-relaxed mb-6">Native elements carry the load in every interactive foundation.</p>
+                                    <p class="text-[10px] font-bold text-zinc-500 leading-relaxed mb-6">Native elements power every interactive component.</p>
                                     <span class="inline-flex items-center gap-3 text-[8px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-primary transition-colors">Read entry <i class="bi bi-arrow-right"></i></span>
                                 </div>
                             </article>
@@ -2778,10 +2778,10 @@
                         </div>
                         <div class="p-8 md:p-12 flex flex-col justify-center">
                             <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">Release Notes</span>
-                            <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-[0.9] mb-6">The vault <br>gets larger.</h4>
-                            <p class="text-xs font-bold text-zinc-500 leading-relaxed mb-8 max-w-md">Seventy-seven new foundations arrive in v1.1. Every block stays on the atomic grid, every surface stays flat, and the runtime remains at zero.</p>
+                            <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-[0.9] mb-6">The library <br>gets larger.</h4>
+                            <p class="text-xs font-bold text-zinc-500 leading-relaxed mb-8 max-w-md">Seventy-seven new components arrive in v1.1. Every block stays on the grid, every surface stays flat, and the runtime remains at zero.</p>
                             <div class="flex flex-col sm:flex-row gap-3">
-                                <a href="#" class="px-8 py-4 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Read Transmission</a>
+                                <a href="#" class="px-8 py-4 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest text-center hover:bg-white transition-colors">Read the Release Notes</a>
                                 <a href="#" class="px-8 py-4 border border-border text-[9px] font-black uppercase tracking-widest text-zinc-400 text-center hover:border-primary hover:text-primary transition-all">View Changelog</a>
                             </div>
                         </div>
@@ -2807,7 +2807,7 @@
                             <a href="#" class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 px-6 md:px-8 py-6 items-center group hover:bg-zinc-900/60 transition-colors">
                                 <div class="md:col-span-2 text-[9px] font-black font-mono text-zinc-600">2026.10.14</div>
                                 <div class="md:col-span-2 text-[8px] font-black uppercase tracking-widest text-primary">Release</div>
-                                <div class="md:col-span-7 text-xs font-black uppercase tracking-widest text-zinc-200 group-hover:text-white transition-colors">Alloy v1.1 expands the layout vault</div>
+                                <div class="md:col-span-7 text-xs font-black uppercase tracking-widest text-zinc-200 group-hover:text-white transition-colors">Alloy v1.1 adds 77 new components</div>
                                 <div class="md:col-span-1 text-left md:text-right text-zinc-600 group-hover:text-primary transition-colors"><i class="bi bi-arrow-right"></i></div>
                             </a>
                             <a href="#" class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 px-6 md:px-8 py-6 items-center group hover:bg-zinc-900/60 transition-colors">
@@ -2856,7 +2856,7 @@
                     <div class="preview-area border border-border bg-bg">
                         <div class="p-8 md:p-12 border-b border-border text-center">
                             <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4 block">Compatible Infrastructure</span>
-                            <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-4">Plugs into the stack.</h4>
+                            <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-4">Works with your existing tools.</h4>
                             <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-600">Twelve verified connectors // zero adapters required</p>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border">
@@ -2966,7 +2966,7 @@
                                         <div class="flex items-center gap-3">
                                             <i class="bi bi-database-fill text-zinc-500"></i>
                                             <div>
-                                                <div class="text-[9px] font-black uppercase tracking-widest">Vault DB</div>
+                                                <div class="text-[9px] font-black uppercase tracking-widest">Primary DB</div>
                                                 <div class="text-[7px] font-mono text-zinc-600">postgres // primary</div>
                                             </div>
                                         </div>
@@ -3091,7 +3091,7 @@
           <article data-type="newsletter" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Newsletter Capture</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Newsletter</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -3106,19 +3106,19 @@
                         <div class="absolute inset-0 grid-lines opacity-10"></div>
                         <div class="relative z-10 max-w-2xl mx-auto">
                             <span class="inline-flex items-center gap-2 px-3 py-1 border border-primary/40 text-primary text-[8px] font-black uppercase tracking-widest mb-8">
-                                <span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Patch Channel
+                                <span class="w-1.5 h-1.5 bg-primary animate-pulse"></span> Newsletter
                             </span>
-                            <h4 class="text-3xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-6">Stay on <br>the grid.</h4>
-                            <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-md mx-auto mb-10">One transmission per release. New components, structural updates, zero noise.</p>
+                            <h4 class="text-3xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-6">Stay up <br>to date.</h4>
+                            <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-md mx-auto mb-10">One email per release. New components, structural updates, no noise.</p>
                             <form class="max-w-lg mx-auto">
                                 <div class="flex flex-col sm:flex-row">
-                                    <input type="email" placeholder="operator@domain.com" class="flex-1 bg-zinc-950 border-2 border-border sm:border-r-0 px-5 py-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
+                                    <input type="email" placeholder="you@domain.com" class="flex-1 bg-zinc-950 border-2 border-border sm:border-r-0 px-5 py-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
                                     <button type="submit" class="px-8 py-4 bg-primary text-zinc-950 font-black text-[10px] uppercase tracking-widest hover:bg-white transition-colors">Subscribe</button>
                                 </div>
                                 <div class="flex flex-wrap items-center justify-center gap-6 mt-5 text-[8px] font-black uppercase tracking-widest text-zinc-600">
                                     <span class="flex items-center gap-2"><i class="bi bi-check2 text-primary"></i> No spam</span>
                                     <span class="flex items-center gap-2"><i class="bi bi-check2 text-primary"></i> Unsubscribe anytime</span>
-                                    <span class="flex items-center gap-2"><i class="bi bi-check2 text-primary"></i> 4.2K operators</span>
+                                    <span class="flex items-center gap-2"><i class="bi bi-check2 text-primary"></i> 4.2K subscribers</span>
                                 </div>
                             </form>
                         </div>
@@ -3135,9 +3135,9 @@
                         <div class="p-8 md:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
                             <div class="absolute inset-0 grid-lines opacity-10"></div>
                             <div class="relative z-10">
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">System Logs</span>
-                                <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-[0.9] mb-6">Receive <br>the patch.</h4>
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">Release notes, new layout blocks and protocol changes delivered from the core.</p>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-6 block">Release Notes</span>
+                                <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-[0.9] mb-6">Get every <br>release.</h4>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">Release notes, new components and breaking changes, straight from the team.</p>
                                 <div class="flex items-center gap-4">
                                     <div class="flex -space-x-3">
                                         <div class="w-8 h-8 bg-primary flex items-center justify-center text-zinc-950 text-[8px] font-black border-2 border-bg">MR</div>
@@ -3145,7 +3145,7 @@
                                         <div class="w-8 h-8 bg-zinc-700 flex items-center justify-center text-white text-[8px] font-black border-2 border-bg">SV</div>
                                         <div class="w-8 h-8 bg-zinc-900 flex items-center justify-center text-zinc-400 text-[8px] font-black border-2 border-bg">+4K</div>
                                     </div>
-                                    <span class="text-[8px] font-black uppercase tracking-widest text-zinc-600">Operators subscribed</span>
+                                    <span class="text-[8px] font-black uppercase tracking-widest text-zinc-600">Subscribers</span>
                                 </div>
                             </div>
                         </div>
@@ -3157,8 +3157,8 @@
                                 </div>
                                 <form class="p-6 space-y-5">
                                     <div>
-                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-500 mb-2 font-mono">> EMAIL_NODE</label>
-                                        <input type="email" placeholder="operator@domain.com" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-mono text-primary outline-none focus:border-primary transition-all placeholder:text-zinc-700" />
+                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-500 mb-2 font-mono">> EMAIL_ADDRESS</label>
+                                        <input type="email" placeholder="you@domain.com" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-mono text-primary outline-none focus:border-primary transition-all placeholder:text-zinc-700" />
                                     </div>
                                     <div>
                                         <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-500 mb-2 font-mono">> FREQUENCY</label>
@@ -3197,7 +3197,7 @@
                                         <span class="text-primary font-mono text-xs">$</span>
                                         <span class="text-[8px] font-black uppercase tracking-widest text-zinc-500 font-mono">subscribe --email</span>
                                     </div>
-                                    <input type="email" placeholder="operator@domain.com" class="flex-1 min-w-0 bg-bg px-4 py-3 text-xs font-mono text-white placeholder-zinc-700 outline-none focus:bg-zinc-900 transition-colors" />
+                                    <input type="email" placeholder="you@domain.com" class="flex-1 min-w-0 bg-bg px-4 py-3 text-xs font-mono text-white placeholder-zinc-700 outline-none focus:bg-zinc-900 transition-colors" />
                                     <button type="submit" class="px-6 py-3 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest font-mono hover:bg-white transition-colors">Run</button>
                                 </div>
                                 <div class="flex items-center justify-between mt-3 text-[8px] font-black uppercase tracking-widest text-zinc-700">
@@ -3215,7 +3215,7 @@
           <article data-type="testimonials" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Proof</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Testimonials</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -3254,7 +3254,7 @@
                 <!-- Variant 2: Customer Logos -->
                 <div class="variant-item" data-variant="Customer Proof Bar">
                     <div class="flex justify-between items-center mb-6">
-                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">02 LOGO_VAULT</p>
+                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">02 LOGO_GRID</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1">SOURCE</button>
                     </div>
                     <div class="preview-area p-8 border border-border bg-bg flex flex-wrap justify-center gap-16 items-center opacity-50 grayscale hover:grayscale-0 transition-all">
@@ -3373,7 +3373,7 @@
                         </div>
                         <div class="p-8 group hover:bg-zinc-900/60 transition-colors">
                             <div class="text-3xl font-black font-outfit italic text-primary mb-6">4.2K</div>
-                            <p class="text-xs font-bold text-zinc-300 leading-relaxed mb-8">"Shipped four products on this foundation. The interface never drifted once."</p>
+                            <p class="text-xs font-bold text-zinc-300 leading-relaxed mb-8">"Shipped four products on this library. The interface never drifted once."</p>
                             <div class="flex items-center gap-3">
                                 <div class="w-8 h-8 bg-primary flex items-center justify-center text-zinc-950 text-[8px] font-black">SV</div>
                                 <div>
@@ -3402,7 +3402,7 @@
           <article data-type="process" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Process & Pipeline</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Process</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -3441,7 +3441,7 @@
                                     <span class="text-[8px] font-black uppercase tracking-widest text-zinc-600">ASSEMBLY // ACTIVE</span>
                                 </div>
                                 <h4 class="text-lg md:text-xl font-black font-outfit uppercase tracking-tight mb-3 text-zinc-200">Compose the blocks</h4>
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-lg">Assemble layouts from the component vault. Keep intersections explicit and let the grid resolve the rest.</p>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-lg">Assemble layouts from the component library. Keep intersections explicit and let the grid resolve the rest.</p>
                                 <div class="flex gap-2 mt-5">
                                     <span class="px-3 py-1 bg-primary/10 border border-primary/30 text-primary text-[8px] font-black uppercase tracking-widest">In Progress</span>
                                     <span class="px-3 py-1 border border-border text-zinc-500 text-[8px] font-black uppercase tracking-widest">29 Blocks</span>
@@ -3454,7 +3454,7 @@
                                     <span class="text-[8px] font-black uppercase tracking-widest text-zinc-700">SHIP // QUEUED</span>
                                 </div>
                                 <h4 class="text-lg md:text-xl font-black font-outfit uppercase tracking-tight mb-3 text-zinc-600">Deploy the system</h4>
-                                <p class="text-xs font-bold text-zinc-700 leading-relaxed max-w-lg">Freeze the interface and push the compiled foundation to the edge ring.</p>
+                                <p class="text-xs font-bold text-zinc-700 leading-relaxed max-w-lg">Freeze the interface and ship the compiled build to production.</p>
                             </div>
                         </div>
                     </div>
@@ -3469,7 +3469,7 @@
                     <div class="preview-area border border-border bg-bg p-6 md:p-10">
                         <div class="max-w-4xl mx-auto">
                             <div class="flex items-center justify-between mb-8">
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-500">Release Protocol</span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-zinc-500">Release Process</span>
                                 <span class="text-[9px] font-black font-mono text-primary">STEP 03 / 04</span>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
@@ -3568,22 +3568,22 @@
           <article data-type="team" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Team & Operators</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Team</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
             <div class="space-y-24">
-                <!-- Variant 1: Operator Grid -->
-                <div class="variant-item" data-variant="Operator Grid" data-keywords="team people operators grid staff">
+                <!-- Variant 1: Team Grid -->
+                <div class="variant-item" data-variant="Team Grid" data-keywords="team people members grid staff">
                     <div class="flex justify-between items-center mb-6">
-                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">01 OPERATOR_GRID</p>
+                        <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">01 TEAM_GRID</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-zinc-950 transition-all">SOURCE</button>
                     </div>
                     <div class="preview-area border border-border bg-bg">
                         <div class="p-6 md:p-10 border-b border-border flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                             <div>
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4 block">Human Layer</span>
-                                <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none">Core operators.</h4>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4 block">Team</span>
+                                <h4 class="text-2xl md:text-4xl font-black font-outfit uppercase tracking-tighter italic leading-none">The team.</h4>
                             </div>
                             <span class="text-[9px] font-black uppercase tracking-widest text-zinc-600">04 active // 02 open slots</span>
                         </div>
@@ -3637,7 +3637,7 @@
                 </div>
 
                 <!-- Variant 2: Profile Split -->
-                <div class="variant-item" data-variant="Operator Profile Split" data-keywords="team profile bio split portrait member">
+                <div class="variant-item" data-variant="Team Profile Split" data-keywords="team profile bio split portrait member">
                     <div class="flex justify-between items-center mb-6">
                         <p class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">02 PROFILE_SPLIT</p>
                         <button class="show-code-btn text-[10px] font-black text-primary border border-primary px-3 py-1 hover:bg-primary hover:text-zinc-950 transition-all">SOURCE</button>
@@ -3658,7 +3658,7 @@
                         </div>
                         <div class="lg:col-span-3 p-8 md:p-12 flex flex-col justify-between">
                             <div>
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary">Founding Operator</span>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary">Founder</span>
                                 <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter italic leading-none mt-4 mb-6">Marcus <br>Reeve.</h4>
                                 <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-lg mb-8">Built the original Alloy grid after years of fighting soft corners and inconsistent spacing. Believes every interface decision should be traceable to a number.</p>
                                 <div class="flex flex-wrap gap-2">
@@ -3688,7 +3688,7 @@
                     <div class="preview-area border border-border bg-bg">
                         <div class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-zinc-950 border-b border-border text-[8px] font-black uppercase tracking-widest text-zinc-600">
                             <div class="col-span-1">ID</div>
-                            <div class="col-span-4">Operator</div>
+                            <div class="col-span-4">Member</div>
                             <div class="col-span-3">Division</div>
                             <div class="col-span-2">Status</div>
                             <div class="col-span-2 text-right">Access</div>
@@ -3743,7 +3743,7 @@
           <article data-type="faq" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">FAQ Systems</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">FAQ</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -3788,7 +3788,7 @@
                                 <i class="bi bi-plus text-zinc-500 group-open:rotate-45 group-open:text-primary transition-all shrink-0"></i>
                             </summary>
                             <div class="px-6 md:px-8 pb-8 pl-[3.75rem] md:pl-[4.5rem]">
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-2xl">No. The foundation is pure HTML and Tailwind utilities. Interactive patterns use native elements such as details, checkbox inputs and range sliders wherever possible.</p>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-2xl">No. The components are pure HTML and Tailwind utilities. Interactive patterns use native elements such as details, checkbox inputs and range sliders wherever possible.</p>
                             </div>
                         </details>
                         <details class="group">
@@ -3816,12 +3816,12 @@
                         <div class="lg:col-span-2 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-border bg-zinc-950 relative overflow-hidden flex flex-col justify-between">
                             <div class="absolute inset-0 grid-lines opacity-10"></div>
                             <div class="relative z-10">
-                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary border border-primary px-3 py-1">Support Node</span>
-                                <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter leading-[0.9] mt-8 mb-6">Need <br>more <br>data?</h4>
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-xs">Direct line to the core team for protocol-level anomalies.</p>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-primary border border-primary px-3 py-1">Support</span>
+                                <h4 class="text-3xl md:text-5xl font-black font-outfit uppercase tracking-tighter leading-[0.9] mt-8 mb-6">Still <br>have <br>questions?</h4>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-xs">Contact the team directly for anything not covered here.</p>
                             </div>
                             <a href="#" class="relative z-10 mt-10 inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-white hover:text-primary transition-colors">
-                                Open transmission <i class="bi bi-arrow-right"></i>
+                                Contact support <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
                         <div class="lg:col-span-3 divide-y divide-border">
@@ -3844,7 +3844,7 @@
                                     <span class="text-[10px] font-black uppercase tracking-widest text-white">How are updates delivered?</span>
                                     <i class="bi bi-plus text-zinc-500 group-open:rotate-45 transition-transform shrink-0"></i>
                                 </summary>
-                                <p class="px-6 pb-6 text-[11px] font-bold text-zinc-500 leading-relaxed">Alloy is a direct source foundation. Pull the repository, inspect the explorer and copy only the structures you deploy.</p>
+                                <p class="px-6 pb-6 text-[11px] font-bold text-zinc-500 leading-relaxed">Pull the repository to get the latest version, then open the explorer and copy only the markup you use.</p>
                             </details>
                             <details class="group">
                                 <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-6 flex items-center justify-between gap-5 hover:bg-zinc-900/60 transition-colors">
@@ -3932,10 +3932,10 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 border-b border-border pb-12 mb-12">
                             <div class="col-span-1 sm:col-span-2">
                                 <div class="font-black text-2xl tracking-tighter uppercase mb-4 text-white">ALLOY.</div>
-                                <p class="text-zinc-600 max-w-xs text-xs">Architectural UI foundations for industrial-grade web dev.</p>
+                                <p class="text-zinc-600 max-w-xs text-xs">A square-edged UI component library for the web.</p>
                             </div>
                             <div class="space-y-4">
-                                <h4 class="text-[8px] font-black text-zinc-500 uppercase">Vault</h4>
+                                <h4 class="text-[8px] font-black text-zinc-500 uppercase">Library</h4>
                                 <a href="#" class="block text-[10px] font-black uppercase text-zinc-300 hover:text-primary transition-colors">Docs</a>
                                 <a href="#" class="block text-[10px] font-black uppercase text-zinc-300 hover:text-primary transition-colors">Elements</a>
                             </div>
@@ -4022,7 +4022,7 @@
                         <div class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
                              <div class="text-[10px] font-black text-zinc-600 uppercase tracking-widest">&copy; 2026 Alloy Industrial. All rights reserved.</div>
                              <div class="flex gap-6">
-                                 <a href="#" class="text-[10px] font-black text-zinc-600 uppercase hover:text-zinc-400">Privacy Protocol</a>
+                                 <a href="#" class="text-[10px] font-black text-zinc-600 uppercase hover:text-zinc-400">Privacy Policy</a>
                                  <a href="#" class="text-[10px] font-black text-zinc-600 uppercase hover:text-zinc-400">Terms of Service</a>
                              </div>
                         </div>
@@ -4041,7 +4041,7 @@
                                     <span class="w-9 h-9 bg-primary flex items-center justify-center text-zinc-950 font-black text-sm">A</span>
                                     <span class="text-xl font-black font-outfit tracking-tighter">ALLOY<span class="text-primary">.</span></span>
                                 </div>
-                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">Structural UI foundations for interfaces that need to hold their shape under production pressure.</p>
+                                <p class="text-xs font-bold text-zinc-500 leading-relaxed max-w-sm mb-8">Structured UI components that hold their shape in production.</p>
                                 <div class="flex gap-2">
                                     <a href="#" class="w-9 h-9 border border-border flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary transition-all"><i class="bi bi-github text-xs"></i></a>
                                     <a href="#" class="w-9 h-9 border border-border flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary transition-all"><i class="bi bi-twitter-x text-xs"></i></a>
@@ -4049,18 +4049,18 @@
                                 </div>
                             </div>
                             <div class="p-8 md:p-12 bg-zinc-950">
-                                <div class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4">Patch Channel</div>
+                                <div class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-4">Newsletter</div>
                                 <div class="text-lg font-black font-outfit uppercase tracking-tight mb-3">Get the next release.</div>
-                                <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-6">One transmission per release.</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-6">One email per release.</p>
                                 <form class="flex">
-                                    <input type="email" placeholder="operator@domain.com" class="flex-1 min-w-0 bg-bg border border-border border-r-0 px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
+                                    <input type="email" placeholder="you@domain.com" class="flex-1 min-w-0 bg-bg border border-border border-r-0 px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
                                     <button class="px-6 py-3 bg-primary text-zinc-950 text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors">Join</button>
                                 </form>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 md:px-12 py-10">
                             <div>
-                                <div class="text-[8px] font-black uppercase tracking-[0.2em] text-zinc-500 mb-4">Vault</div>
+                                <div class="text-[8px] font-black uppercase tracking-[0.2em] text-zinc-500 mb-4">Library</div>
                                 <div class="space-y-3">
                                     <a href="#" class="block text-[9px] font-bold uppercase text-zinc-400 hover:text-primary transition-colors">Components</a>
                                     <a href="#" class="block text-[9px] font-bold uppercase text-zinc-400 hover:text-primary transition-colors">Layouts</a>
@@ -4137,7 +4137,7 @@
           <article data-type="feedback" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">System Status</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Feedback & Alerts</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -4147,7 +4147,7 @@
                     <div class="preview-area p-6 bg-amber-500/5 border-l-4 border-amber-500 flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <i class="bi bi-exclamation-triangle-fill text-amber-500"></i>
-                            <span class="text-xs font-black uppercase tracking-widest text-amber-500/80">Kernel Override: Integrity Compromised</span>
+                            <span class="text-xs font-black uppercase tracking-widest text-amber-500/80">Warning: Unsaved changes will be lost</span>
                         </div>
                         <button class="show-code-btn text-[8px] font-black text-amber-500 px-2 py-1 border border-amber-500/30">SOURCE</button>
                     </div>
@@ -4169,7 +4169,7 @@
                     <div class="preview-area p-6 bg-rose-500/5 border-2 border-rose-500 border-dashed flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <i class="bi bi-x-octagon-fill text-rose-500"></i>
-                            <span class="text-xs font-black uppercase tracking-widest">Protocol ERROR_049: Identity Node Missing</span>
+                            <span class="text-xs font-black uppercase tracking-widest">ERROR_049: Account not found</span>
                         </div>
                         <button class="show-code-btn text-[8px] font-black text-rose-500 px-2 py-1 border border-rose-500/30">SOURCE</button>
                     </div>
@@ -4254,7 +4254,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center gap-5">
                             <div class="w-10 h-10 bg-primary text-zinc-950 flex items-center justify-center shrink-0"><i class="bi bi-broadcast"></i></div>
                             <div class="flex-1">
-                                <div class="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Protocol Update Available</div>
+                                <div class="text-[10px] font-black uppercase tracking-widest text-primary mb-1">Update Available</div>
                                 <p class="text-[10px] font-bold text-zinc-400 leading-relaxed">Build 8492 is ready for promotion. Verify the manifest before deploying to the edge ring.</p>
                             </div>
                             <div class="flex items-center gap-2 shrink-0">
@@ -4304,7 +4304,7 @@
           <article data-type="navigation" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Data Control</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Navigation</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -4329,7 +4329,7 @@
                         <button class="p-8 bg-primary text-zinc-950 text-xs font-black uppercase">Core</button>
                         <button class="p-8 bg-bg text-zinc-600 text-xs font-black uppercase border-l border-border hover:bg-zinc-900 transition-colors">Aux</button>
                         <button class="p-8 bg-bg text-zinc-600 text-xs font-black uppercase border-l border-border hover:bg-zinc-900 transition-colors">Logic</button>
-                        <button class="p-8 bg-bg text-zinc-600 text-xs font-black uppercase border-l border-border hover:bg-zinc-900 transition-colors">Vault</button>
+                        <button class="p-8 bg-bg text-zinc-600 text-xs font-black uppercase border-l border-border hover:bg-zinc-900 transition-colors">Library</button>
                     </div>
                     <button class="show-code-btn text-[8px] font-black text-zinc-600 uppercase mt-2 hover:text-primary transition-colors">SOURCE</button>
                 </div>
@@ -4360,7 +4360,7 @@
                     </div>
                     <div class="preview-area border border-border bg-bg">
                         <div class="px-5 py-4 flex flex-wrap items-center gap-2 md:gap-3">
-                            <a href="#" class="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-zinc-600 hover:text-primary transition-colors"><i class="bi bi-hdd-stack text-[10px]"></i> Vault</a>
+                            <a href="#" class="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-zinc-600 hover:text-primary transition-colors"><i class="bi bi-hdd-stack text-[10px]"></i> Library</a>
                             <i class="bi bi-chevron-right text-[8px] text-zinc-800"></i>
                             <a href="#" class="text-[9px] font-black uppercase tracking-widest text-zinc-600 hover:text-primary transition-colors">Layouts</a>
                             <i class="bi bi-chevron-right text-[8px] text-zinc-800"></i>
@@ -4651,7 +4651,7 @@
                                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-6 border-b border-border">
                                     <div>
                                         <div class="text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Settings / Identity</div>
-                                        <h4 class="text-xl md:text-2xl font-black font-outfit uppercase tracking-tighter italic leading-none">Operator profile</h4>
+                                        <h4 class="text-xl md:text-2xl font-black font-outfit uppercase tracking-tighter italic leading-none">User profile</h4>
                                     </div>
                                     <button class="px-5 py-2.5 bg-primary text-zinc-950 text-[8px] font-black uppercase tracking-widest hover:bg-white transition-colors">Save changes</button>
                                 </div>
@@ -4661,14 +4661,14 @@
                                         <input type="text" value="Marcus Reeve" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-bold text-white outline-none focus:border-primary transition-all" />
                                     </div>
                                     <div>
-                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-500 mb-2">Terminal Address</label>
+                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-500 mb-2">Email Address</label>
                                         <input type="email" value="marcus@alloy.system" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-mono text-zinc-400 outline-none focus:border-primary transition-all" />
                                     </div>
                                 </div>
                                 <div class="space-y-px bg-border border border-border">
                                     <div class="bg-bg p-4 flex items-center justify-between gap-4">
                                         <div>
-                                            <div class="text-[9px] font-black uppercase tracking-widest mb-1">Two-Factor Protocol</div>
+                                            <div class="text-[9px] font-black uppercase tracking-widest mb-1">Two-Factor Authentication</div>
                                             <div class="text-[7px] font-bold uppercase text-zinc-600">Hardware key required on every new session</div>
                                         </div>
                                         <label class="relative block w-10 h-5 shrink-0 cursor-pointer">
@@ -4727,16 +4727,16 @@
                         <div class="relative z-10 w-full max-w-sm border border-border bg-zinc-950 p-8 shadow-2xl">
                             <div class="text-center mb-8">
                                 <div class="w-12 h-12 bg-primary flex items-center justify-center font-black text-zinc-950 mx-auto mb-4">A</div>
-                                <h3 class="text-2xl font-black font-outfit uppercase tracking-tighter">Identity_Check</h3>
-                                <p class="text-xs font-bold text-zinc-500 mt-2">Enter credentials to access Nexus.</p>
+                                <h3 class="text-2xl font-black font-outfit uppercase tracking-tighter">Sign In</h3>
+                                <p class="text-xs font-bold text-zinc-500 mt-2">Enter your credentials to continue.</p>
                             </div>
                             <form class="space-y-4">
                                 <div>
-                                    <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2">Node ID (Email)</label>
-                                    <input type="email" class="w-full bg-bg border border-border p-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" placeholder="operator@alloy.com">
+                                    <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2">Email</label>
+                                    <input type="email" class="w-full bg-bg border border-border p-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" placeholder="you@alloy.com">
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2">Access Key (Password)</label>
+                                    <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2">Password</label>
                                     <input type="password" class="w-full bg-bg border border-border p-4 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" placeholder="••••••••">
                                 </div>
                                 <div class="flex items-center justify-between mt-2 mb-8">
@@ -4746,11 +4746,11 @@
                                             <span class="absolute inset-0 border border-zinc-700 peer-checked:bg-primary peer-checked:border-primary transition-all"></span>
                                             <i class="bi bi-check text-bg text-[10px] absolute inset-0 hidden peer-checked:flex items-center justify-center pointer-events-none"></i>
                                         </span>
-                                        <span class="text-[10px] font-bold text-zinc-500 uppercase">Keep Line Open</span>
+                                        <span class="text-[10px] font-bold text-zinc-500 uppercase">Keep me signed in</span>
                                     </label>
-                                    <a href="#" class="text-[10px] font-bold text-primary uppercase underline hover:text-white transition-all">Lost Key?</a>
+                                    <a href="#" class="text-[10px] font-bold text-primary uppercase underline hover:text-white transition-all">Forgot password?</a>
                                 </div>
-                                <button type="submit" class="w-full py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest hover:bg-white transition-all">Initialize Sequence</button>
+                                <button type="submit" class="w-full py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest hover:bg-white transition-all">Sign In</button>
                             </form>
                         </div>
                     </div>
@@ -4766,27 +4766,27 @@
                         <div class="hidden lg:flex flex-1 border-r border-border bg-zinc-900 p-12 flex-col justify-between relative min-h-[400px]">
                             <div class="absolute inset-0 grid-lines opacity-10"></div>
                             <div class="relative z-10">
-                                <span class="text-[10px] font-black tracking-widest text-primary border border-primary px-3 py-1">SYSTEM_AUTH</span>
+                                <span class="text-[10px] font-black tracking-widest text-primary border border-primary px-3 py-1">ACCOUNT_LOGIN</span>
                                 <h3 class="text-4xl font-black font-outfit uppercase mt-8 text-white leading-none">Access <br>Restricted <br>Area.</h3>
                             </div>
                             <div class="relative z-10">
-                                <p class="text-sm font-bold text-zinc-500 border-l border-primary pl-4 max-w-xs">"Security protocols dictate a full structural scan before node entry."</p>
+                                <p class="text-sm font-bold text-zinc-500 border-l border-primary pl-4 max-w-xs">"Sign in with your team account to access the private dashboard."</p>
                             </div>
                         </div>
                         <div class="flex-1 p-6 md:p-10 lg:p-16 flex items-center justify-center min-h-[400px]">
                             <div class="w-full max-w-sm">
-                                <h4 class="text-xl font-black font-outfit uppercase mb-8">Establish Link</h4>
+                                <h4 class="text-xl font-black font-outfit uppercase mb-8">Sign in to Alloy</h4>
                                 <div class="space-y-4 mb-8">
                                     <button class="w-full py-3 border border-border flex items-center justify-center gap-3 text-xs font-bold uppercase hover:bg-zinc-900 transition-all text-zinc-300">
-                                        <i class="bi bi-github"></i> Github Protocol
+                                        <i class="bi bi-github"></i> Continue with GitHub
                                     </button>
                                     <button class="w-full py-3 border border-border flex items-center justify-center gap-3 text-xs font-bold uppercase hover:bg-zinc-900 transition-all text-zinc-300">
-                                        <i class="bi bi-google"></i> Google Identity
+                                        <i class="bi bi-google"></i> Continue with Google
                                     </button>
                                 </div>
                                 <div class="flex items-center gap-4 mb-8">
                                     <div class="h-px flex-1 bg-border"></div>
-                                    <span class="text-[10px] font-black text-zinc-600 uppercase">Or internal</span>
+                                    <span class="text-[10px] font-black text-zinc-600 uppercase">Or with email</span>
                                     <div class="h-px flex-1 bg-border"></div>
                                 </div>
                                 <form class="space-y-4">
@@ -4881,7 +4881,7 @@
           <article data-type="contact" class="component-block">
             <div class="flex items-center gap-4 mb-12">
                 <div class="h-px flex-1 bg-border"></div>
-                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Comms & Contact</h3>
+                <h3 class="text-xs font-black tracking-[0.5em] text-zinc-500 uppercase">Contact</h3>
                 <div class="h-px flex-1 bg-border"></div>
             </div>
 
@@ -4895,7 +4895,7 @@
                     <div class="preview-area p-8 lg:p-16 border border-border bg-bg">
                         <div class="max-w-2xl mx-auto border border-border bg-zinc-950 pixel-border p-2">
                              <div class="bg-zinc-900 px-4 py-2 border-b border-border flex justify-between items-center mb-6">
-                                 <span class="text-[10px] font-black text-zinc-500 tracking-widest uppercase">Direct Transmission // Port 3000</span>
+                                 <span class="text-[10px] font-black text-zinc-500 tracking-widest uppercase">Contact Form // Port 3000</span>
                                  <div class="flex gap-2">
                                      <div class="w-2 h-2 bg-border"></div>
                                      <div class="w-2 h-2 bg-primary"></div>
@@ -4904,7 +4904,7 @@
                              <form class="p-6 space-y-6 form-mono">
                                  <div class="grid md:grid-cols-2 gap-6">
                                      <div>
-                                         <label class="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 font-mono">> Operator_Name</label>
+                                         <label class="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 font-mono">> Full_Name</label>
                                          <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-xs text-primary font-mono outline-none focus:border-primary" placeholder="_">
                                      </div>
                                      <div>
@@ -4913,10 +4913,10 @@
                                      </div>
                                  </div>
                                  <div>
-                                     <label class="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 font-mono">> Transmission_Body</label>
-                                     <textarea rows="5" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-xs text-primary font-mono outline-none focus:border-primary resize-none" placeholder="Enter logic structure here..."></textarea>
+                                     <label class="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 font-mono">> Message_Body</label>
+                                     <textarea rows="5" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-xs text-primary font-mono outline-none focus:border-primary resize-none" placeholder="Type your message here..."></textarea>
                                  </div>
-                                 <button type="submit" class="w-full py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest font-mono hover:bg-white transition-all">> EXECUTE_SEND</button>
+                                 <button type="submit" class="w-full py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest font-mono hover:bg-white transition-all">> SEND_MESSAGE</button>
                              </form>
                         </div>
                     </div>
@@ -4931,7 +4931,7 @@
                     <div class="preview-area grid md:grid-cols-5 border border-border bg-bg">
                          <div class="md:col-span-2 border-b md:border-b-0 md:border-r border-border p-12 bg-zinc-900/50">
                              <h4 class="text-3xl font-black font-outfit uppercase tracking-tighter mb-4">Support <br>Hub.</h4>
-                             <p class="text-zinc-500 text-xs font-bold leading-relaxed mb-12">Submit technical anomalies or logic requests to the core team.</p>
+                             <p class="text-zinc-500 text-xs font-bold leading-relaxed mb-12">Send bug reports and feature requests to the core team.</p>
                              <div class="space-y-6">
                                  <div>
                                      <div class="text-[10px] font-black text-zinc-600 uppercase tracking-widest mb-1">Global HQ</div>
@@ -4947,25 +4947,25 @@
                              <form class="space-y-8">
                                  <div class="grid grid-cols-2 gap-8">
                                      <div class="border-b border-border pb-2 group">
-                                         <input type="text" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="First Designation">
+                                         <input type="text" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="First name">
                                      </div>
                                      <div class="border-b border-border pb-2 group">
-                                         <input type="text" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="Last Designation">
+                                         <input type="text" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="Last name">
                                      </div>
                                  </div>
                                  <div class="border-b border-border pb-2 group">
-                                     <input type="email" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="Terminal Address">
+                                     <input type="email" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all rounded-none" placeholder="Email address">
                                  </div>
                                  <div class="border-b border-border pb-2 group">
                                      <select class="w-full bg-transparent text-sm font-bold text-zinc-700 outline-none group-focus-within:text-primary transition-all appearance-none cursor-pointer">
                                          <option value="" disabled selected>Select Query Type // --</option>
-                                         <option value="bug">Logic Anomaly (Bug)</option>
-                                         <option value="feat">System Upgrade (Feature)</option>
-                                         <option value="other">Other Transmission</option>
+                                         <option value="bug">Bug Report</option>
+                                         <option value="feat">Feature Request</option>
+                                         <option value="other">Other</option>
                                      </select>
                                  </div>
                                  <div class="border-b border-border pb-2 group">
-                                     <textarea rows="3" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all resize-none rounded-none" placeholder="Transmission Details..."></textarea>
+                                     <textarea rows="3" class="w-full bg-transparent text-sm font-bold text-white placeholder-zinc-700 outline-none group-focus-within:text-primary transition-all resize-none rounded-none" placeholder="Message details..."></textarea>
                                  </div>
                                  <div class="flex justify-end">
                                      <button type="submit" class="px-8 py-4 border border-zinc-700 text-zinc-400 font-black text-xs uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Submit Entry</button>
@@ -5009,25 +5009,25 @@
                         </div>
                         <div class="p-6 md:p-10">
                             <div class="text-[9px] font-black uppercase tracking-[0.3em] text-primary mb-3">Direct Line</div>
-                            <h4 class="text-2xl md:text-3xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-8">Open a <br>channel.</h4>
+                            <h4 class="text-2xl md:text-3xl font-black font-outfit uppercase tracking-tighter italic leading-none mb-8">Send us <br>a message.</h4>
                             <form class="space-y-5">
                                 <div class="grid sm:grid-cols-2 gap-5">
                                     <div>
-                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Operator</label>
+                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Name</label>
                                         <input type="text" placeholder="Name" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
                                     </div>
                                     <div>
-                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Terminal</label>
+                                        <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Email</label>
                                         <input type="email" placeholder="Email" class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all" />
                                     </div>
                                 </div>
                                 <div>
-                                    <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Payload</label>
-                                    <textarea rows="4" placeholder="Transmission details..." class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all resize-none"></textarea>
+                                    <label class="block text-[8px] font-black uppercase tracking-widest text-zinc-600 mb-2">Message</label>
+                                    <textarea rows="4" placeholder="Write your message..." class="w-full bg-zinc-950 border border-border px-4 py-3 text-xs font-bold text-white placeholder-zinc-700 outline-none focus:border-primary transition-all resize-none"></textarea>
                                 </div>
                                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                                    <span class="text-[7px] font-black uppercase tracking-widest text-zinc-700">Encrypted // response in 24h</span>
-                                    <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors">Transmit</button>
+                                    <span class="text-[7px] font-black uppercase tracking-widest text-zinc-700">Response within 24 hours</span>
+                                    <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-primary text-zinc-950 text-[9px] font-black uppercase tracking-widest hover:bg-white transition-colors">Send</button>
                                 </div>
                             </form>
                         </div>
@@ -5039,7 +5039,7 @@
 
 
         <p id="emptyState" class="hidden py-40 text-center text-[10px] font-black text-zinc-600 uppercase tracking-[0.5em]">
-           No foundations detected for this query.
+           No components match this search.
         </p>
       </div>
     </main>
@@ -5198,7 +5198,7 @@
         });
 
         emptyState.classList.toggle('hidden', visibleCount !== 0);
-        summary.textContent = `showing ${visibleCount} foundations`;
+        summary.textContent = `showing ${visibleCount} components`;
       }
 
       document.querySelectorAll('.copy-code-btn').forEach(btn => {

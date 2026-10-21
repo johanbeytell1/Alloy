@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alloy | Premium UI Foundation</title>
+    <title>Alloy | UI Component Library</title>
     <link href="./src/index.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
@@ -48,9 +48,9 @@
             </div>
 
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#logic-system" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Logic System</a>
-                <a href="#atomic-core" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Atomic Core</a>
-                <a href="#pixel-engine" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Pixel Engine</a>
+                <a href="#design-system" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Design System</a>
+                <a href="#core-components" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Core Components</a>
+                <a href="#spacing-grid" class="text-[10px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">Spacing Grid</a>
                 <a href="components/index.html" class="px-8 py-3 bg-primary text-zinc-950 font-black text-[10px] uppercase tracking-widest hover:bg-white transition-all">EXPLORER</a>
             </nav>
 
@@ -61,11 +61,11 @@
         </div>
         <!-- Mobile Navigation Menu -->
         <nav id="mobileMenu" class="hidden md:hidden border-b border-border bg-bg px-6 py-8 flex-col gap-6">
-            <a href="#logic-system" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Logic System</a>
-            <a href="#atomic-core" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Atomic Core</a>
-            <a href="#pixel-engine" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Pixel Engine</a>
+            <a href="#design-system" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Design System</a>
+            <a href="#core-components" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Core Components</a>
+            <a href="#spacing-grid" class="mobile-link text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-white transition-colors">Spacing Grid</a>
             <hr class="border-border">
-            <a href="components/index.html" class="w-full text-center py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest">Vault Explorer</a>
+            <a href="components/index.html" class="w-full text-center py-4 bg-primary text-zinc-950 font-black text-xs uppercase tracking-widest">Component Explorer</a>
         </nav>
     </header>
 
@@ -75,20 +75,20 @@
             <div class="text-center relative z-10">
                 <div class="inline-flex items-center gap-3 px-4 py-2 border border-border bg-zinc-900/40 mb-12">
                     <span class="w-2 h-2 bg-primary animate-pulse"></span>
-                    <span class="text-[10px] font-black tracking-[0.3em] uppercase opacity-70">Industrial Standard v1.1.0</span>
+                    <span class="text-[10px] font-black tracking-[0.3em] uppercase opacity-70">Version 1.1.0</span>
                 </div>
 
                 <h1 class="text-[clamp(3rem,10vw,10rem)] font-black font-outfit tracking-[calc(-0.06em)] leading-[0.85] mb-12">
-                    RAW <br> <span class="text-primary italic">STRUCTURAL</span> <br> POWER.
+                    STRUCTURED <br> <span class="text-primary italic">UI</span> <br> COMPONENTS.
                 </h1>
 
                 <p class="text-zinc-500 max-w-2xl mx-auto text-xl font-medium mb-16 leading-relaxed">
-                    Alloy is a premium UI foundation designed for the next generation of industrial-grade interfaces. Zero fluff. Pure architecture.
+                    Alloy is a library of square-edged, grid-aligned UI components built on Tailwind CSS v4. Copy the markup, paste it into your project, and restyle it with design tokens.
                 </p>
 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full max-w-xl md:max-w-none mx-auto">
                     <a href="components/index.html" class="w-full md:w-auto px-8 py-4 md:px-12 md:py-6 bg-primary text-zinc-950 font-black text-sm md:text-lg uppercase tracking-widest border-2 border-primary hover:bg-transparent hover:text-primary transition-all text-center">
-                        COLLECTION EXPLORER
+                        BROWSE COMPONENTS
                     </a>
                     <a href="https://github.com/Infinitode/Alloy" target="_blank" class="w-full md:w-auto px-8 py-4 md:px-12 md:py-6 border-2 border-border font-black text-sm md:text-lg uppercase tracking-widest hover:border-primary hover:text-primary hover:bg-zinc-900/50 transition-all text-center">
                         SOURCE CODE
@@ -117,19 +117,19 @@
             </div>
         </section>
 
-        <!-- Logic System Section -->
-        <section id="logic-system" class="max-w-[1440px] mx-auto border-x border-b border-border bg-bg/50">
+        <!-- Design System Section -->
+        <section id="design-system" class="max-w-[1440px] mx-auto border-x border-b border-border bg-bg/50">
             <div class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
                 <div class="p-8 md:p-12 lg:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-border">
-                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic">Logic <br>System.</h2>
+                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic">Design <br>System.</h2>
                     <p class="text-zinc-500 text-lg md:text-xl leading-relaxed mb-12 md:mb-16 max-w-md">
-                        Every component in Alloy is built with a block-first mentality. We don't hide the structure; we celebrate it. Consistent padding, predictable scaling, and solid intersections.
+                        Every component is built from visible rectangular blocks. Padding, scaling and borders follow the same rules everywhere, so pieces line up when you combine them.
                     </p>
                     <div class="flex items-center gap-6 md:gap-8 group cursor-pointer max-w-sm">
                         <div class="w-14 h-14 md:w-16 md:h-16 shrink-0 border border-primary flex items-center justify-center font-black text-primary transition-all group-hover:bg-primary group-hover:text-zinc-950">01</div>
                         <div>
-                            <h4 class="font-black text-base md:text-lg uppercase text-white group-hover:text-primary transition-colors">Global State Logic</h4>
-                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">Base elements designed for absolute modularity.</p>
+                            <h4 class="font-black text-base md:text-lg uppercase text-white group-hover:text-primary transition-colors">Consistent Structure</h4>
+                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">Base elements share the same spacing and border rules.</p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                         <div class="absolute -bottom-1 -right-1 w-2 h-2 bg-primary"></div>
 
                         <div class="h-full border border-dashed border-zinc-800 p-6 md:p-10 flex flex-col justify-center group">
-                            <span class="text-[10px] md:text-xs font-mono text-primary mb-6">// Logic Core</span>
+                            <span class="text-[10px] md:text-xs font-mono text-primary mb-6">// Layout Preview</span>
                             <div class="space-y-4">
                                 <div class="h-px bg-zinc-900 w-full group-hover:bg-primary/50 transition-colors"></div>
                                 <div class="h-px bg-zinc-800 w-[85%] group-hover:bg-primary/30 transition-colors"></div>
@@ -160,8 +160,8 @@
             </div>
         </section>
 
-        <!-- Atomic Core Section -->
-        <section id="atomic-core" class="max-w-[1440px] mx-auto border-x border-b border-border bg-zinc-950">
+        <!-- Core Components Section -->
+        <section id="core-components" class="max-w-[1440px] mx-auto border-x border-b border-border bg-zinc-950">
             <div class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
                 <div class="relative bg-bg/50 flex flex-col p-8 md:p-12 overflow-hidden justify-center items-center border-b md:border-b-0 md:border-r border-border order-last md:order-first">
                     <div class="absolute inset-0 grid-lines opacity-10"></div>
@@ -183,34 +183,34 @@
                     </div>
                 </div>
                 <div class="p-8 md:p-12 lg:p-24 flex flex-col justify-center">
-                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic">Atomic <br>Core.</h2>
+                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic">Core <br>Components.</h2>
                     <p class="text-zinc-500 text-lg md:text-xl leading-relaxed mb-12 md:mb-16 max-w-md">
-                        Every button, input, and container functions as an immutable node. Changing properties affects rendering logically without disrupting your layout grid.
+                        Every button, input and container is self-contained. You can restyle or swap one component without breaking the layout around it.
                     </p>
                     <div class="flex items-center gap-6 md:gap-8 group cursor-pointer max-w-sm">
                         <div class="w-14 h-14 md:w-16 md:h-16 shrink-0 border border-zinc-700 flex items-center justify-center font-black text-zinc-700 transition-all group-hover:border-white group-hover:text-white">02</div>
                         <div>
-                            <h4 class="font-black text-base md:text-lg uppercase text-zinc-300 group-hover:text-white transition-colors">Immutable Elements</h4>
-                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">Never break global application logic.</p>
+                            <h4 class="font-black text-base md:text-lg uppercase text-zinc-300 group-hover:text-white transition-colors">Self-Contained Elements</h4>
+                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">Styled in isolation, safe to drop into any page.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pixel Engine Section -->
-        <section id="pixel-engine" class="max-w-[1440px] mx-auto border-x border-b border-border bg-bg/50">
+        <!-- Spacing Grid Section -->
+        <section id="spacing-grid" class="max-w-[1440px] mx-auto border-x border-b border-border bg-bg/50">
             <div class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
                 <div class="p-8 md:p-12 lg:p-24 flex flex-col justify-center border-b md:border-b-0 md:border-r border-border">
-                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic text-primary">Pixel<br>Engine.</h2>
+                    <h2 class="text-5xl md:text-6xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-12 italic text-primary">Spacing<br>Grid.</h2>
                     <p class="text-zinc-500 text-lg md:text-xl leading-relaxed mb-12 md:mb-16 max-w-md">
-                        Everything snaps to a rigid set of layout variables. Absolute precision rendering means zero half-pixels and perfect baseline alignment globally.
+                        Every measurement comes from a fixed spacing scale. Components align because they share the same units — no half-pixels, no drifting baselines.
                     </p>
                     <div class="flex items-center gap-6 md:gap-8 group cursor-pointer max-w-sm">
                         <div class="w-14 h-14 md:w-16 md:h-16 shrink-0 border border-zinc-700 flex items-center justify-center font-black text-zinc-700 transition-all group-hover:border-primary group-hover:text-primary">03</div>
                         <div>
-                            <h4 class="font-black text-base md:text-lg uppercase text-white group-hover:text-primary transition-colors">Strict Metric Adherence</h4>
-                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">All variants strictly obey identical metrics.</p>
+                            <h4 class="font-black text-base md:text-lg uppercase text-white group-hover:text-primary transition-colors">Consistent Measurements</h4>
+                            <p class="text-zinc-600 text-xs md:text-sm italic mt-1">Every size variant uses the same spacing scale.</p>
                         </div>
                     </div>
                 </div>
@@ -235,35 +235,35 @@
             </div>
         </section>
 
-        <!-- Vault Expansion Section -->
-        <section id="vault-expansion" class="max-w-[1440px] mx-auto border-x border-b border-border bg-zinc-950">
+        <!-- New Components Section -->
+        <section id="new-components" class="max-w-[1440px] mx-auto border-x border-b border-border bg-zinc-950">
             <div class="grid grid-cols-1 lg:grid-cols-5">
                 <div class="lg:col-span-2 p-8 md:p-12 xl:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border relative overflow-hidden">
                     <div class="absolute inset-0 grid-lines opacity-10"></div>
                     <div class="relative z-10">
                         <div class="inline-flex items-center gap-3 px-4 py-2 border border-primary/40 bg-primary/5 mb-8">
                             <span class="w-2 h-2 bg-primary animate-pulse"></span>
-                            <span class="text-[9px] font-black tracking-[0.3em] uppercase text-primary">V1.1.0 // Vault Expansion</span>
+                            <span class="text-[9px] font-black tracking-[0.3em] uppercase text-primary">V1.1.0 // New Components</span>
                         </div>
-                        <h2 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-8">77 New <br><span class="text-primary">Foundations.</span></h2>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md mb-10">Fourteen new blocks join the vault: control switches, telemetry, load states, overlays, paging, stats, bento grids, editorial, integrations, newsletters, process, team, FAQ and full app shells.</p>
+                        <h2 class="text-4xl md:text-6xl font-black font-outfit uppercase tracking-tighter italic leading-[0.85] mb-8">77 New <br><span class="text-primary">Components.</span></h2>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-md mb-10">Fourteen new categories: toggles, indicators, loaders, overlays, pagination, stats, bento grids, blog layouts, integrations, newsletters, process, team, FAQ and full app shells.</p>
                         <div class="grid grid-cols-3 gap-px bg-border border border-border mb-10">
                             <div class="bg-bg p-4">
-                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Variants</div>
+                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Components</div>
                                 <div class="text-xl font-black font-outfit italic">133</div>
                             </div>
                             <div class="bg-bg p-4">
-                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Blocks</div>
+                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Categories</div>
                                 <div class="text-xl font-black font-outfit italic">29</div>
                             </div>
                             <div class="bg-bg p-4">
-                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">Runtime</div>
+                                <div class="text-[8px] font-black uppercase text-zinc-600 mb-2">JS Deps</div>
                                 <div class="text-xl font-black font-outfit italic text-primary">0</div>
                             </div>
                         </div>
                     </div>
                     <a href="components/index.html" class="relative z-10 inline-flex items-center justify-between gap-4 px-6 py-4 bg-primary text-zinc-950 font-black text-[10px] uppercase tracking-widest hover:bg-white transition-colors">
-                        Explore the Expanded Vault
+                        Browse All Components
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -271,12 +271,12 @@
                     <a href="components/index.html#toggles" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-toggle-on text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">04</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Toggles</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Boolean switch banks and segmented controls.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Switches, switch banks and segmented controls.</p>
                     </a>
                     <a href="components/index.html#indicators" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-activity text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">04</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Indicators</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Progress arrays, KPI tiles and signal grids.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Progress bars, KPI tiles and status grids.</p>
                     </a>
                     <a href="components/index.html#loaders" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-arrow-repeat text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
@@ -291,12 +291,12 @@
                     <a href="components/index.html#pagination" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-three-dots text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Pagination</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Block pagers, cursor steps and load blocks.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Page numbers, steppers and load-more blocks.</p>
                     </a>
                     <a href="components/index.html#stats" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-bar-chart text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Stats</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Metric strips, charts and KPI consoles.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Metric strips, charts and KPI panels.</p>
                     </a>
                     <a href="components/index.html#bento" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-grid-3x3-gap text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
@@ -306,12 +306,12 @@
                     <a href="components/index.html#blog" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-journal-text text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Editorial</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Article grids, featured posts and log indexes.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Article grids, featured posts and post lists.</p>
                     </a>
                     <a href="components/index.html#integrations" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-plug text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Integrations</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Connector grids, flows and API stacks.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Connector grids, flows and API lists.</p>
                     </a>
                     <a href="components/index.html#newsletter" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-envelope text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
@@ -326,12 +326,12 @@
                     <a href="components/index.html#team" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-people text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">Team</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Operator grids, profiles and rosters.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Profile cards, grids and rosters.</p>
                     </a>
                     <a href="components/index.html#faq" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-question-circle text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
                         <div class="text-[9px] font-black uppercase tracking-widest text-zinc-300 group-hover:text-white transition-colors mb-2">FAQ</div>
-                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Accordions, split consoles and terminal logs.</p>
+                        <p class="text-[8px] font-bold uppercase tracking-widest text-zinc-600 leading-relaxed">Accordions and split FAQ layouts.</p>
                     </a>
                     <a href="components/index.html#dashboard" class="bg-bg p-6 min-h-[150px] flex flex-col justify-between group hover:bg-zinc-900 transition-colors">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-window-stack text-zinc-600 group-hover:text-primary transition-colors"></i><span class="text-[8px] font-black font-mono text-zinc-700">03</span></div>
@@ -340,7 +340,7 @@
                     </a>
                     <a href="components/index.html" class="bg-primary p-6 min-h-[150px] group flex flex-col justify-between col-span-2 sm:col-span-1">
                         <div class="flex items-center justify-between mb-8"><i class="bi bi-arrow-up-right text-zinc-950"></i><span class="text-[8px] font-black font-mono text-zinc-950/60">133</span></div>
-                        <div class="text-[9px] font-black uppercase tracking-widest text-zinc-950">All Foundations</div>
+                        <div class="text-[9px] font-black uppercase tracking-widest text-zinc-950">All Components</div>
                     </a>
                 </div>
             </div>
@@ -348,12 +348,12 @@
 
         <!-- Final Call Section -->
         <section class="max-w-[1440px] mx-auto border-x border-border py-20 md:py-40 text-center px-6 md:px-10">
-            <h2 class="text-3xl sm:text-5xl md:text-7xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-16 italic opacity-20">BUILD THE IMPERISHABLE.</h2>
+            <h2 class="text-3xl sm:text-5xl md:text-7xl font-black font-outfit uppercase tracking-tighter mb-8 md:mb-16 italic opacity-20">BUILD SOMETHING THAT LASTS.</h2>
             <div class="max-w-4xl mx-auto border-4 border-primary p-8 md:p-24 relative">
                 <div class="absolute -top-4 -left-4 w-8 h-8 bg-primary"></div>
                 <div class="absolute -bottom-4 -right-4 w-8 h-8 bg-primary"></div>
-                <h3 class="text-2xl sm:text-4xl md:text-6xl font-black mb-8 md:mb-12 uppercase">READY TO INITIALIZE?</h3>
-                <a href="components/index.html" class="inline-block px-8 py-5 md:px-16 md:py-8 bg-primary text-zinc-950 font-black text-base md:text-2xl uppercase tracking-widest hover:bg-white transition-all border-4 border-primary hover:border-white">START EXPLORER</a>
+                <h3 class="text-2xl sm:text-4xl md:text-6xl font-black mb-8 md:mb-12 uppercase">READY TO START?</h3>
+                <a href="components/index.html" class="inline-block px-8 py-5 md:px-16 md:py-8 bg-primary text-zinc-950 font-black text-base md:text-2xl uppercase tracking-widest hover:bg-white transition-all border-4 border-primary hover:border-white">OPEN THE EXPLORER</a>
             </div>
         </section>
     </main>
@@ -365,19 +365,19 @@
                     <div class="w-8 h-8 bg-primary flex items-center justify-center font-black text-zinc-950">A</div>
                     <span class="text-xl font-bold font-outfit tracking-tighter">ALLOY</span>
                 </div>
-                <p class="text-zinc-600 max-w-sm text-xs md:text-sm font-medium">Architectural UI foundations for industrial-grade web development. Powered by Tailwind V4.</p>
+                <p class="text-zinc-600 max-w-sm text-xs md:text-sm font-medium">A square-edged UI component library built on Tailwind CSS v4. No JavaScript dependencies.</p>
             </div>
             <div class="space-y-4">
-                <h4 class="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-4 md:mb-6">Foundations</h4>
-                <a href="#logic-system" class="block text-xs font-bold text-zinc-400 hover:text-primary">Logic System</a>
-                <a href="#atomic-core" class="block text-xs font-bold text-zinc-400 hover:text-primary">Atomic Core</a>
-                <a href="#pixel-engine" class="block text-xs font-bold text-zinc-400 hover:text-primary">Pixel Engine</a>
+                <h4 class="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-4 md:mb-6">Sections</h4>
+                <a href="#design-system" class="block text-xs font-bold text-zinc-400 hover:text-primary">Design System</a>
+                <a href="#core-components" class="block text-xs font-bold text-zinc-400 hover:text-primary">Core Components</a>
+                <a href="#spacing-grid" class="block text-xs font-bold text-zinc-400 hover:text-primary">Spacing Grid</a>
             </div>
             <div class="space-y-4">
                 <h4 class="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-4 md:mb-6">Repository</h4>
-                <a href="https://github.com/Infinitode/Alloy" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">GitHub Profile</a>
-                <a href="https://github.com/Infinitode/Alloy#readme" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">README Tracker</a>
-                <a href="https://github.com/Infinitode/Alloy/commits/main" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">Changelog Logs</a>
+                <a href="https://github.com/Infinitode/Alloy" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">GitHub Repository</a>
+                <a href="https://github.com/Infinitode/Alloy#readme" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">README</a>
+                <a href="https://github.com/Infinitode/Alloy/commits/main" target="_blank" class="block text-xs font-bold text-zinc-400 hover:text-primary">Commit History</a>
             </div>
         </div>
         <div class="max-w-[1440px] mx-auto mt-20 pt-10 border-t border-zinc-900 flex justify-between items-center text-[10px] font-black text-zinc-700 uppercase tracking-[0.2em]">
