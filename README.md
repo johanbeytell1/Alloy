@@ -6,6 +6,32 @@
 
 ## Recent Changes
 
+### Patch — 17 new components & prebuilt page layouts
+
+**Three new categories (9 components):**
+
+| Category | Components |
+| --- | --- |
+| **Timelines & Activity** (`#timeline`) | **Activity Feed** — vertical event rail with icons, descriptions and timestamps · **Version Changelog** — release entries with version numbers, dates, "Latest" tag and categorized change lists · **Audit Log** — compact monospace event rows with time-range filters, status column and CSV export footer |
+| **Empty States** (`#empty`) | **No Results** — search placeholder with clear-search action · **First Project** — dashed onboarding panel with primary/secondary CTAs and reassurance footer · **Connection Error** — timeout state with retry and status-page actions plus an error reference code |
+| **Files & Media** (`#files`) | **Upload Dropzone** — drag-and-drop target with an in-progress upload bar and a completed row · **File Browser** — breadcrumb header, column headings and folder/file rows with sizes and row menus · **Storage Usage** — segmented capacity bar with a per-category legend and quota footer |
+
+**Five new variants in existing categories:**
+
+- **Buttons · Icon Toolbar** — bordered, divider-separated icon button strip with an active state and a destructive action.
+- **Badges · Version Tags** — stable / beta / nightly / deprecated release tags plus a build-hash chip.
+- **Inputs · Verification Code** — 6-digit code entry with filled, focused and empty box states, verify button and resend countdown.
+- **Overlays · Command Palette** — ⌘K-style quick-action dialog with search row, grouped results, keyboard-shortcut chips and a navigation-hint footer.
+- **Feedback · Toast Stack** — stacked success / in-progress / error notifications with inline actions and dismiss buttons.
+
+**Three new prebuilt page layouts (App Shells):**
+
+- **Status Page** — overall-status banner with uptime percentage, per-service rows with 12-segment uptime bars (operational / degraded / outage states) and a past-incidents section.
+- **Error 404 Page** — full-page not-found layout with oversized display numerals, explanation copy, primary/secondary navigation actions and a request-ID footer.
+- **Documentation Layout** — three-column docs shell: section navigation, article content with breadcrumb, terminal-styled code block, callout note and prev/next pager, plus an "On this page" table of contents.
+
+Totals move from **133 components / 29 categories** to **150 components / 32 categories**. The sidebar, filter counts, search index and `#hash` deep links pick the new categories up automatically, and the landing page grid now links directly to them.
+
 ### Patch — plain-language copy & contrast-aware Theme Lab
 
 - **Contrast-aware theming:** the Theme Lab now keeps text legible no matter which colors you pick. Choosing a light background automatically re-derives the whole neutral ramp (text, borders, surfaces) from that background, flipping the site into a readable light mode; choosing a different dark background re-tints the ramp to match. Text on primary-colored buttons, tiles and chips switches between dark and light ink based on WCAG contrast against the chosen primary — across every component on both pages, including hover fills.
@@ -31,10 +57,10 @@
 
 | Group | Blocks | Covers |
 | --- | --- | --- |
-| Elements | Buttons, Inputs, Badges, Toggles, Indicators, Load States, Overlays, Pagination, Feedback | Actions, forms, status, switches, telemetry, async states, menus, paging and system messaging |
-| Layouts | Headers, Heroes, Features, Bento, Stats, Pricing, Tables, CTA, Editorial, Integrations, Newsletter, Testimonials, Process, Team, FAQ, Footers, Navigation, Auth, Contact, App Shells | Complete page sections from hero to footer, including dashboard and kanban shells |
+| Elements | Buttons, Inputs, Badges, Toggles, Indicators, Load States, Overlays, Pagination, Feedback, Timelines, Empty States, Files & Media | Actions, forms, status, switches, indicators, async states, menus, paging, system messaging, activity history, placeholder states and file handling |
+| Layouts | Headers, Heroes, Features, Bento, Stats, Pricing, Tables, CTA, Editorial, Integrations, Newsletter, Testimonials, Process, Team, FAQ, Footers, Navigation, Auth, Contact, App Shells | Complete page sections from hero to footer, including dashboard, kanban, settings, status, 404 and documentation shells |
 
-**133 variants / 29 categories.** Every variant lives inside `components/index.html` and can be copied directly from the explorer's `SOURCE` dialog.
+**150 variants / 32 categories.** Every variant lives inside `components/index.html` and can be copied directly from the explorer's `SOURCE` dialog.
 
 ## Features
 
