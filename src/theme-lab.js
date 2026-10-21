@@ -107,6 +107,18 @@
     return (hi + 0.05) / (lo + 0.05);
   }
 
+  /* Nudge an accent color toward the page's ink until it reads at
+     WCAG AA (4.5:1) against the given background. Returns the color
+     unchanged when it is already legible. */
+  function readableAccent(color, bg) {
+    var ink = luminance(bg) > 0.45 ? '#000000' : '#ffffff';
+    for (var t = 0; t <= 1.001; t += 0.05) {
+      var candidate = mix(color, ink, t);
+      if (contrast(candidate, bg) >= 4.5) return candidate;
+    }
+    return ink;
+  }
+
   /* ---------- state ---------- */
 
   function loadState() {
@@ -154,7 +166,13 @@
       'html[data-theme-mode="dark"] [class~="hover:bg-white"]:hover { color: ' + DARK_INK + ' !important; }',
       'html[data-theme-mode="light"] [class~="hover:bg-white"]:hover { color: ' + LIGHT_INK + ' !important; }',
       '/* Outline buttons that empty their fill on hover revert to primary-colored text */',
-      'html[data-theme-mode] [class~="hover:bg-transparent"]:hover { color: var(--color-primary) !important; }'
+      'html[data-theme-mode] [class~="hover:bg-transparent"]:hover { color: var(--color-primary) !important; }',
+      '/* Group-hover primary fills follow the primary ink too */',
+      'html[data-primary-ink="dark"] [class~="group"]:hover [class~="group-hover:bg-primary"] { color: ' + DARK_INK + ' !important; }',
+      'html[data-primary-ink="light"] [class~="group"]:hover [class~="group-hover:bg-primary"] { color: ' + LIGHT_INK + ' !important; }',
+      '/* Hover accents (sidebar filters, links, tiles) use a contrast-checked primary */',
+      'html[data-theme-mode] [class~="hover:text-primary"]:hover,',
+      'html[data-theme-mode] [class~="group"]:hover [class~="group-hover:text-primary"] { color: var(--tl-readable-primary, var(--color-primary)) !important; }'
     ].join('\n');
     var style = document.createElement('style');
     style.id = 'themeLabRules';
@@ -206,6 +224,10 @@
     /* Choose the ink that contrasts best with the primary color. */
     var inkMode = contrast(primary, DARK_INK) >= contrast(primary, LIGHT_INK) ? 'dark' : 'light';
     root.setAttribute('data-primary-ink', inkMode);
+
+    /* Hover accents must stay legible against the page background:
+       darken (light mode) or lighten (dark mode) the primary as needed. */
+    root.style.setProperty('--tl-readable-primary', readableAccent(primary, bg));
   }
 
   /* ---------- UI ---------- */
